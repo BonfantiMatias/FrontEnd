@@ -1,16 +1,21 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { Basico } from './basico';
-import { BASICOS } from './basico.json';
+
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class BasicoService {
 
-  constructor() { }
+  private urlEndPoint: string = 'http://localhost:8080/api/basicos'
 
-  getBasicos(): Basico {
-    return BASICOS
+  constructor(private http:HttpClient) { }
+
+  getBasicos(): Observable <Basico[] >{
+    return this.http.get<Basico[]>(this.urlEndPoint); 
   }
 
 }

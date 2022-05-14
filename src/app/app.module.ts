@@ -7,18 +7,23 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PortadaComponent } from './portada/portada.component';
 import { AboutComponent } from './about/about.component';
-
+import {HttpClientModule} from '@angular/common/http';
+import { SkillComponent } from './skill/skill.component';
+import { FormComponent } from './about/form.component'
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     PortadaComponent,
-    AboutComponent
+    AboutComponent,
+    SkillComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

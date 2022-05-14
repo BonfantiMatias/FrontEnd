@@ -11,37 +11,37 @@
                     </div>
                 </div>    
                 <div class="col-lg-6 col-md-12">       
-                    <div class="card-body">
+                    <div class="card-body"  >
                         <div class="h4 mt-0 title">Informacion Basica</div>
                         <div class="row">
                             <div class="col-sm-4">
                                 <strong class="text-uppercase">Nombre:</strong>
                             </div>
-                            <div class="col-sm-8"> {{basico.nombre}} </div>
+                            <div class="col-sm-8" *ngFor="let basico of basico" > {{basico.nombre}} </div>
                         </div>
                         <div class="row mt-4">
                             <div class="col-sm-4">
                                 <strong class="text-uppercase">Fecha de Nacimiento:</strong>
                             </div>
-                            <div class="col-sm-8">{{basico.nacimiento}}</div>
+                            <div class="col-sm-8" *ngFor="let basico of basico" >{{basico.nacimiento}}</div>
                         </div>
                         <div class="row mt-4">
                             <div class="col-sm-4">
                                 <strong class="text-uppercase">Email:</strong>
                             </div>
-                            <div class="col-sm-8">{{basico.email}}</div>
+                            <div class="col-sm-8" *ngFor="let basico of basico" >{{basico.email}}</div>
                         </div>
                         <div class="row mt-4">
                             <div class="col-sm-4">
                                 <strong class="text-uppercase">Ubicacion:</strong>
                             </div>
-                            <div class="col-sm-8">{{basico.ubicacion}}</div>
+                            <div class="col-sm-8" *ngFor="let basico of basico" >{{basico.ubicacion}}</div>
                         </div>
                         <div class="row mt-4">
                             <div class="col-sm-4">
                                 <strong class="text-uppercase">Idioma:</strong>
                             </div>
-                            <div class="col-sm-8">{{basico.idioma}}</div>
+                            <div class="col-sm-8" *ngFor="let basico of basico" >{{basico.idioma}}</div>
                         </div>
                      </div>
                 </div>

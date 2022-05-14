@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Basico } from '../about/basico';
+import { BasicoService } from '../about/basico.service';
 
 @Component({
   selector: 'app-portada',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortadaComponent implements OnInit {
 
-  constructor() { }
+  basico!: Basico[];
+
+  constructor(private basicoService: BasicoService) { }
 
   ngOnInit(): void {
+    this.basicoService.getBasicos().subscribe(
+      basico => this.basico = basico
+    );
   }
 
 }

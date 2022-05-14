@@ -9,12 +9,14 @@ import { BasicoService } from './basico.service';
 })
 export class AboutComponent implements OnInit {
 
-  basico!: Basico;
+  basico!: Basico[];
 
   constructor(private basicoService: BasicoService) { }
 
   ngOnInit(): void {
-    this.basico = this.basicoService.getBasicos();
+    this.basicoService.getBasicos().subscribe(
+      basico => this.basico = basico
+    );
   }
 
 }
