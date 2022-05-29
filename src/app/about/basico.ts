@@ -1,9 +1,10 @@
 export class Basico {
-    id!: number;
+    id!: any;
     nombre!: string;
     email!: string;
     nacimiento!: string;
     ubicacion!: string;
     idioma!: string;
+    foto!: string;
 
 }

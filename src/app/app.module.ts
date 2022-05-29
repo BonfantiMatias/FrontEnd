@@ -9,7 +9,20 @@ import { PortadaComponent } from './portada/portada.component';
 import { AboutComponent } from './about/about.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SkillComponent } from './skill/skill.component';
-import { FormComponent } from './about/form.component'
+import { FormComponent } from './about/form.component';
+import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { P404Component } from './p404/p404.component';
+
+import { DetalleComponent } from './portada/detalle/detalle.component';
+import { Detalle2Component } from './about/detalle2/detalle2.component';
+import { FormSComponent } from './skill/form-s.component';
+import { SkillService } from './skill/skill.service';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,14 +31,22 @@ import { FormComponent } from './about/form.component'
     PortadaComponent,
     AboutComponent,
     SkillComponent,
-    FormComponent
+    FormComponent,
+    LoginComponent,
+    HomeComponent,
+    P404Component,
+    DetalleComponent,
+    Detalle2Component,
+    FormSComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+    
   ],
-  providers: [],
+  providers: [SkillService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

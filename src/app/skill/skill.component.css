@@ -1,0 +1,2540 @@
+body {
+  background: #fff;
+}
+h1 {
+  color: #fff;
+  text-align: center;
+}
+.circular-progress {
+  position: relative;
+  margin: auto;
+  transition: ease-in all 0.2s;
+}
+.circular-progress,
+.circular-progress:before,
+.circular-progress:after {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+}
+.circular-progress:before,
+.circular-progress:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+.circular-progress:before {
+  line-height: 10.25rem;
+  padding: 0.75em;
+  box-sizing: border-box;
+  font-size: 3.5rem;
+}
+.circular-progress.verde {
+  background: linear-gradient(0deg, green 50%, rgba(0, 128, 0, 0.2) 50%);
+}
+.circular-progress.verde:before,
+.circular-progress.verde:after {
+  color: green;
+}
+.html5 {
+  background: linear-gradient(0deg, tomato 50%, rgba(255, 99, 71, 0.2) 50%);
+  transform: rotate(126deg);
+}
+.html5:before,
+.html5:after {
+  color: tomato;
+}
+.html5:before {
+  content: "70%";
+  background: #fff content-box;
+  transform: rotate(-126deg);
+  text-transform: uppercase;
+}
+.html5:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-126deg);
+}
+.html5 > div {
+  color: green;
+  transform: scale(1.2) rotate(-126deg);
+  z-index: 5;
+}
+.css3 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(153deg);
+}
+.css3:before,
+.css3:after {
+  color: steelblue;
+}
+.css3:before {
+  content: "85%";
+  background: #fff content-box;
+  transform: rotate(-153deg);
+  text-transform: uppercase;
+}
+.css3:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-153deg);
+}
+.css3 > div {
+  color: green;
+  transform: scale(1.2) rotate(-153deg);
+  z-index: 5;
+}
+.jscript {
+  background: linear-gradient(0deg, orange 50%, rgba(255, 165, 0, 0.2) 50%);
+  transform: rotate(81deg);
+}
+.jscript:before,
+.jscript:after {
+  color: orange;
+}
+.jscript:before {
+  content: "45%";
+  background: #fff content-box;
+  transform: rotate(-81deg);
+  text-transform: uppercase;
+}
+.jscript:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-81deg);
+}
+.jscript > div {
+  color: green;
+  transform: scale(1.2) rotate(-81deg);
+  z-index: 5;
+}
+.skills {
+  display: flex;
+  margin-top: 4em;
+  flex-wrap: wrap;
+}
+.progress-0 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(0deg);
+}
+.progress-0:before,
+.progress-0:after {
+  color: steelblue;
+}
+.progress-0:before {
+  content: "0%";
+  background: #fff content-box;
+  transform: rotate(-0deg);
+  text-transform: uppercase;
+}
+.progress-0:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-0deg);
+}
+.progress-0 > div {
+  color: green;
+  transform: scale(1.2) rotate(-0deg);
+  z-index: 5;
+}
+.progress-1 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(1.8deg);
+}
+.progress-1:before,
+.progress-1:after {
+  color: steelblue;
+}
+.progress-1:before {
+  content: "1%";
+  background: #fff content-box;
+  transform: rotate(-1.8deg);
+  text-transform: uppercase;
+}
+.progress-1:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-1.8deg);
+}
+.progress-1 > div {
+  color: green;
+  transform: scale(1.2) rotate(-1.8deg);
+  z-index: 5;
+}
+.progress-2 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(3.6deg);
+}
+.progress-2:before,
+.progress-2:after {
+  color: steelblue;
+}
+.progress-2:before {
+  content: "2%";
+  background: #fff content-box;
+  transform: rotate(-3.6deg);
+  text-transform: uppercase;
+}
+.progress-2:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-3.6deg);
+}
+.progress-2 > div {
+  color: green;
+  transform: scale(1.2) rotate(-3.6deg);
+  z-index: 5;
+}
+.progress-3 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(5.4deg);
+}
+.progress-3:before,
+.progress-3:after {
+  color: steelblue;
+}
+.progress-3:before {
+  content: "3%";
+  background: #fff content-box;
+  transform: rotate(-5.4deg);
+  text-transform: uppercase;
+}
+.progress-3:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-5.4deg);
+}
+.progress-3 > div {
+  color: green;
+  transform: scale(1.2) rotate(-5.4deg);
+  z-index: 5;
+}
+.progress-4 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(7.2deg);
+}
+.progress-4:before,
+.progress-4:after {
+  color: steelblue;
+}
+.progress-4:before {
+  content: "4%";
+  background: #fff content-box;
+  transform: rotate(-7.2deg);
+  text-transform: uppercase;
+}
+.progress-4:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-7.2deg);
+}
+.progress-4 > div {
+  color: green;
+  transform: scale(1.2) rotate(-7.2deg);
+  z-index: 5;
+}
+.progress-5 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(9deg);
+}
+.progress-5:before,
+.progress-5:after {
+  color: steelblue;
+}
+.progress-5:before {
+  content: "5%";
+  background: #fff content-box;
+  transform: rotate(-9deg);
+  text-transform: uppercase;
+}
+.progress-5:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-9deg);
+}
+.progress-5 > div {
+  color: green;
+  transform: scale(1.2) rotate(-9deg);
+  z-index: 5;
+}
+.progress-6 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(10.8deg);
+}
+.progress-6:before,
+.progress-6:after {
+  color: steelblue;
+}
+.progress-6:before {
+  content: "6%";
+  background: #fff content-box;
+  transform: rotate(-10.8deg);
+  text-transform: uppercase;
+}
+.progress-6:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-10.8deg);
+}
+.progress-6 > div {
+  color: green;
+  transform: scale(1.2) rotate(-10.8deg);
+  z-index: 5;
+}
+.progress-7 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(12.6deg);
+}
+.progress-7:before,
+.progress-7:after {
+  color: steelblue;
+}
+.progress-7:before {
+  content: "7%";
+  background: #fff content-box;
+  transform: rotate(-12.6deg);
+  text-transform: uppercase;
+}
+.progress-7:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-12.6deg);
+}
+.progress-7 > div {
+  color: green;
+  transform: scale(1.2) rotate(-12.6deg);
+  z-index: 5;
+}
+.progress-8 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(14.4deg);
+}
+.progress-8:before,
+.progress-8:after {
+  color: steelblue;
+}
+.progress-8:before {
+  content: "8%";
+  background: #fff content-box;
+  transform: rotate(-14.4deg);
+  text-transform: uppercase;
+}
+.progress-8:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-14.4deg);
+}
+.progress-8 > div {
+  color: green;
+  transform: scale(1.2) rotate(-14.4deg);
+  z-index: 5;
+}
+.progress-9 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(16.2deg);
+}
+.progress-9:before,
+.progress-9:after {
+  color: steelblue;
+}
+.progress-9:before {
+  content: "9%";
+  background: #fff content-box;
+  transform: rotate(-16.2deg);
+  text-transform: uppercase;
+}
+.progress-9:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-16.2deg);
+}
+.progress-9 > div {
+  color: green;
+  transform: scale(1.2) rotate(-16.2deg);
+  z-index: 5;
+}
+.progress-10 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(18deg);
+}
+.progress-10:before,
+.progress-10:after {
+  color: steelblue;
+}
+.progress-10:before {
+  content: "10%";
+  background: #fff content-box;
+  transform: rotate(-18deg);
+  text-transform: uppercase;
+}
+.progress-10:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-18deg);
+}
+.progress-10 > div {
+  color: green;
+  transform: scale(1.2) rotate(-18deg);
+  z-index: 5;
+}
+.progress-11 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(19.8deg);
+}
+.progress-11:before,
+.progress-11:after {
+  color: steelblue;
+}
+.progress-11:before {
+  content: "11%";
+  background: #fff content-box;
+  transform: rotate(-19.8deg);
+  text-transform: uppercase;
+}
+.progress-11:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-19.8deg);
+}
+.progress-11 > div {
+  color: green;
+  transform: scale(1.2) rotate(-19.8deg);
+  z-index: 5;
+}
+.progress-12 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(21.6deg);
+}
+.progress-12:before,
+.progress-12:after {
+  color: steelblue;
+}
+.progress-12:before {
+  content: "12%";
+  background: #fff content-box;
+  transform: rotate(-21.6deg);
+  text-transform: uppercase;
+}
+.progress-12:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-21.6deg);
+}
+.progress-12 > div {
+  color: green;
+  transform: scale(1.2) rotate(-21.6deg);
+  z-index: 5;
+}
+.progress-13 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(23.4deg);
+}
+.progress-13:before,
+.progress-13:after {
+  color: steelblue;
+}
+.progress-13:before {
+  content: "13%";
+  background: #fff content-box;
+  transform: rotate(-23.4deg);
+  text-transform: uppercase;
+}
+.progress-13:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-23.4deg);
+}
+.progress-13 > div {
+  color: green;
+  transform: scale(1.2) rotate(-23.4deg);
+  z-index: 5;
+}
+.progress-14 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(25.2deg);
+}
+.progress-14:before,
+.progress-14:after {
+  color: steelblue;
+}
+.progress-14:before {
+  content: "14%";
+  background: #fff content-box;
+  transform: rotate(-25.2deg);
+  text-transform: uppercase;
+}
+.progress-14:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-25.2deg);
+}
+.progress-14 > div {
+  color: green;
+  transform: scale(1.2) rotate(-25.2deg);
+  z-index: 5;
+}
+.progress-15 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(27deg);
+}
+.progress-15:before,
+.progress-15:after {
+  color: steelblue;
+}
+.progress-15:before {
+  content: "15%";
+  background: #fff content-box;
+  transform: rotate(-27deg);
+  text-transform: uppercase;
+}
+.progress-15:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-27deg);
+}
+.progress-15 > div {
+  color: green;
+  transform: scale(1.2) rotate(-27deg);
+  z-index: 5;
+}
+.progress-16 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(28.8deg);
+}
+.progress-16:before,
+.progress-16:after {
+  color: steelblue;
+}
+.progress-16:before {
+  content: "16%";
+  background: #fff content-box;
+  transform: rotate(-28.8deg);
+  text-transform: uppercase;
+}
+.progress-16:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-28.8deg);
+}
+.progress-16 > div {
+  color: green;
+  transform: scale(1.2) rotate(-28.8deg);
+  z-index: 5;
+}
+.progress-17 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(30.6deg);
+}
+.progress-17:before,
+.progress-17:after {
+  color: steelblue;
+}
+.progress-17:before {
+  content: "17%";
+  background: #fff content-box;
+  transform: rotate(-30.6deg);
+  text-transform: uppercase;
+}
+.progress-17:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-30.6deg);
+}
+.progress-17 > div {
+  color: green;
+  transform: scale(1.2) rotate(-30.6deg);
+  z-index: 5;
+}
+.progress-18 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(32.4deg);
+}
+.progress-18:before,
+.progress-18:after {
+  color: steelblue;
+}
+.progress-18:before {
+  content: "18%";
+  background: #fff content-box;
+  transform: rotate(-32.4deg);
+  text-transform: uppercase;
+}
+.progress-18:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-32.4deg);
+}
+.progress-18 > div {
+  color: green;
+  transform: scale(1.2) rotate(-32.4deg);
+  z-index: 5;
+}
+.progress-19 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(34.2deg);
+}
+.progress-19:before,
+.progress-19:after {
+  color: steelblue;
+}
+.progress-19:before {
+  content: "19%";
+  background: #fff content-box;
+  transform: rotate(-34.2deg);
+  text-transform: uppercase;
+}
+.progress-19:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-34.2deg);
+}
+.progress-19 > div {
+  color: green;
+  transform: scale(1.2) rotate(-34.2deg);
+  z-index: 5;
+}
+.progress-20 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(36deg);
+}
+.progress-20:before,
+.progress-20:after {
+  color: steelblue;
+}
+.progress-20:before {
+  content: "20%";
+  background: #fff content-box;
+  transform: rotate(-36deg);
+  text-transform: uppercase;
+}
+.progress-20:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-36deg);
+}
+.progress-20 > div {
+  color: green;
+  transform: scale(1.2) rotate(-36deg);
+  z-index: 5;
+}
+.progress-21 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(37.8deg);
+}
+.progress-21:before,
+.progress-21:after {
+  color: steelblue;
+}
+.progress-21:before {
+  content: "21%";
+  background: #fff content-box;
+  transform: rotate(-37.8deg);
+  text-transform: uppercase;
+}
+.progress-21:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-37.8deg);
+}
+.progress-21 > div {
+  color: green;
+  transform: scale(1.2) rotate(-37.8deg);
+  z-index: 5;
+}
+.progress-22 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(39.6deg);
+}
+.progress-22:before,
+.progress-22:after {
+  color: steelblue;
+}
+.progress-22:before {
+  content: "22%";
+  background: #fff content-box;
+  transform: rotate(-39.6deg);
+  text-transform: uppercase;
+}
+.progress-22:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-39.6deg);
+}
+.progress-22 > div {
+  color: green;
+  transform: scale(1.2) rotate(-39.6deg);
+  z-index: 5;
+}
+.progress-23 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(41.4deg);
+}
+.progress-23:before,
+.progress-23:after {
+  color: steelblue;
+}
+.progress-23:before {
+  content: "23%";
+  background: #fff content-box;
+  transform: rotate(-41.4deg);
+  text-transform: uppercase;
+}
+.progress-23:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-41.4deg);
+}
+.progress-23 > div {
+  color: green;
+  transform: scale(1.2) rotate(-41.4deg);
+  z-index: 5;
+}
+.progress-24 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(43.2deg);
+}
+.progress-24:before,
+.progress-24:after {
+  color: steelblue;
+}
+.progress-24:before {
+  content: "24%";
+  background: #fff content-box;
+  transform: rotate(-43.2deg);
+  text-transform: uppercase;
+}
+.progress-24:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-43.2deg);
+}
+.progress-24 > div {
+  color: green;
+  transform: scale(1.2) rotate(-43.2deg);
+  z-index: 5;
+}
+.progress-25 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(45deg);
+}
+.progress-25:before,
+.progress-25:after {
+  color: steelblue;
+}
+.progress-25:before {
+  content: "25%";
+  background: #fff content-box;
+  transform: rotate(-45deg);
+  text-transform: uppercase;
+}
+.progress-25:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-45deg);
+}
+.progress-25 > div {
+  color: green;
+  transform: scale(1.2) rotate(-45deg);
+  z-index: 5;
+}
+.progress-26 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(46.8deg);
+}
+.progress-26:before,
+.progress-26:after {
+  color: steelblue;
+}
+.progress-26:before {
+  content: "26%";
+  background: #fff content-box;
+  transform: rotate(-46.8deg);
+  text-transform: uppercase;
+}
+.progress-26:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-46.8deg);
+}
+.progress-26 > div {
+  color: green;
+  transform: scale(1.2) rotate(-46.8deg);
+  z-index: 5;
+}
+.progress-27 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(48.6deg);
+}
+.progress-27:before,
+.progress-27:after {
+  color: steelblue;
+}
+.progress-27:before {
+  content: "27%";
+  background: #fff content-box;
+  transform: rotate(-48.6deg);
+  text-transform: uppercase;
+}
+.progress-27:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-48.6deg);
+}
+.progress-27 > div {
+  color: green;
+  transform: scale(1.2) rotate(-48.6deg);
+  z-index: 5;
+}
+.progress-28 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(50.4deg);
+}
+.progress-28:before,
+.progress-28:after {
+  color: steelblue;
+}
+.progress-28:before {
+  content: "28%";
+  background: #fff content-box;
+  transform: rotate(-50.4deg);
+  text-transform: uppercase;
+}
+.progress-28:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-50.4deg);
+}
+.progress-28 > div {
+  color: green;
+  transform: scale(1.2) rotate(-50.4deg);
+  z-index: 5;
+}
+.progress-29 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(52.2deg);
+}
+.progress-29:before,
+.progress-29:after {
+  color: steelblue;
+}
+.progress-29:before {
+  content: "29%";
+  background: #fff content-box;
+  transform: rotate(-52.2deg);
+  text-transform: uppercase;
+}
+.progress-29:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-52.2deg);
+}
+.progress-29 > div {
+  color: green;
+  transform: scale(1.2) rotate(-52.2deg);
+  z-index: 5;
+}
+.progress-30 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(54deg);
+}
+.progress-30:before,
+.progress-30:after {
+  color: steelblue;
+}
+.progress-30:before {
+  content: "30%";
+  background: #fff content-box;
+  transform: rotate(-54deg);
+  text-transform: uppercase;
+}
+.progress-30:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-54deg);
+}
+.progress-30 > div {
+  color: green;
+  transform: scale(1.2) rotate(-54deg);
+  z-index: 5;
+}
+.progress-31 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(55.8deg);
+}
+.progress-31:before,
+.progress-31:after {
+  color: steelblue;
+}
+.progress-31:before {
+  content: "31%";
+  background: #fff content-box;
+  transform: rotate(-55.8deg);
+  text-transform: uppercase;
+}
+.progress-31:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-55.8deg);
+}
+.progress-31 > div {
+  color: green;
+  transform: scale(1.2) rotate(-55.8deg);
+  z-index: 5;
+}
+.progress-32 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(57.6deg);
+}
+.progress-32:before,
+.progress-32:after {
+  color: steelblue;
+}
+.progress-32:before {
+  content: "32%";
+  background: #fff content-box;
+  transform: rotate(-57.6deg);
+  text-transform: uppercase;
+}
+.progress-32:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-57.6deg);
+}
+.progress-32 > div {
+  color: green;
+  transform: scale(1.2) rotate(-57.6deg);
+  z-index: 5;
+}
+.progress-33 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(59.4deg);
+}
+.progress-33:before,
+.progress-33:after {
+  color: steelblue;
+}
+.progress-33:before {
+  content: "33%";
+  background: #fff content-box;
+  transform: rotate(-59.4deg);
+  text-transform: uppercase;
+}
+.progress-33:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-59.4deg);
+}
+.progress-33 > div {
+  color: green;
+  transform: scale(1.2) rotate(-59.4deg);
+  z-index: 5;
+}
+.progress-34 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(61.2deg);
+}
+.progress-34:before,
+.progress-34:after {
+  color: steelblue;
+}
+.progress-34:before {
+  content: "34%";
+  background: #fff content-box;
+  transform: rotate(-61.2deg);
+  text-transform: uppercase;
+}
+.progress-34:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-61.2deg);
+}
+.progress-34 > div {
+  color: green;
+  transform: scale(1.2) rotate(-61.2deg);
+  z-index: 5;
+}
+.progress-35 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(63deg);
+}
+.progress-35:before,
+.progress-35:after {
+  color: steelblue;
+}
+.progress-35:before {
+  content: "35%";
+  background: #fff content-box;
+  transform: rotate(-63deg);
+  text-transform: uppercase;
+}
+.progress-35:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-63deg);
+}
+.progress-35 > div {
+  color: green;
+  transform: scale(1.2) rotate(-63deg);
+  z-index: 5;
+}
+.progress-36 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(64.8deg);
+}
+.progress-36:before,
+.progress-36:after {
+  color: steelblue;
+}
+.progress-36:before {
+  content: "36%";
+  background: #fff content-box;
+  transform: rotate(-64.8deg);
+  text-transform: uppercase;
+}
+.progress-36:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-64.8deg);
+}
+.progress-36 > div {
+  color: green;
+  transform: scale(1.2) rotate(-64.8deg);
+  z-index: 5;
+}
+.progress-37 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(66.6deg);
+}
+.progress-37:before,
+.progress-37:after {
+  color: steelblue;
+}
+.progress-37:before {
+  content: "37%";
+  background: #fff content-box;
+  transform: rotate(-66.6deg);
+  text-transform: uppercase;
+}
+.progress-37:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-66.6deg);
+}
+.progress-37 > div {
+  color: green;
+  transform: scale(1.2) rotate(-66.6deg);
+  z-index: 5;
+}
+.progress-38 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(68.4deg);
+}
+.progress-38:before,
+.progress-38:after {
+  color: steelblue;
+}
+.progress-38:before {
+  content: "38%";
+  background: #fff content-box;
+  transform: rotate(-68.4deg);
+  text-transform: uppercase;
+}
+.progress-38:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-68.4deg);
+}
+.progress-38 > div {
+  color: green;
+  transform: scale(1.2) rotate(-68.4deg);
+  z-index: 5;
+}
+.progress-39 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(70.2deg);
+}
+.progress-39:before,
+.progress-39:after {
+  color: steelblue;
+}
+.progress-39:before {
+  content: "39%";
+  background: #fff content-box;
+  transform: rotate(-70.2deg);
+  text-transform: uppercase;
+}
+.progress-39:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-70.2deg);
+}
+.progress-39 > div {
+  color: green;
+  transform: scale(1.2) rotate(-70.2deg);
+  z-index: 5;
+}
+.progress-40 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(72deg);
+}
+.progress-40:before,
+.progress-40:after {
+  color: steelblue;
+}
+.progress-40:before {
+  content: "40%";
+  background: #fff content-box;
+  transform: rotate(-72deg);
+  text-transform: uppercase;
+}
+.progress-40:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-72deg);
+}
+.progress-40 > div {
+  color: green;
+  transform: scale(1.2) rotate(-72deg);
+  z-index: 5;
+}
+.progress-41 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(73.8deg);
+}
+.progress-41:before,
+.progress-41:after {
+  color: steelblue;
+}
+.progress-41:before {
+  content: "41%";
+  background: #fff content-box;
+  transform: rotate(-73.8deg);
+  text-transform: uppercase;
+}
+.progress-41:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-73.8deg);
+}
+.progress-41 > div {
+  color: green;
+  transform: scale(1.2) rotate(-73.8deg);
+  z-index: 5;
+}
+.progress-42 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(75.6deg);
+}
+.progress-42:before,
+.progress-42:after {
+  color: steelblue;
+}
+.progress-42:before {
+  content: "42%";
+  background: #fff content-box;
+  transform: rotate(-75.6deg);
+  text-transform: uppercase;
+}
+.progress-42:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-75.6deg);
+}
+.progress-42 > div {
+  color: green;
+  transform: scale(1.2) rotate(-75.6deg);
+  z-index: 5;
+}
+.progress-43 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(77.4deg);
+}
+.progress-43:before,
+.progress-43:after {
+  color: steelblue;
+}
+.progress-43:before {
+  content: "43%";
+  background: #fff content-box;
+  transform: rotate(-77.4deg);
+  text-transform: uppercase;
+}
+.progress-43:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-77.4deg);
+}
+.progress-43 > div {
+  color: green;
+  transform: scale(1.2) rotate(-77.4deg);
+  z-index: 5;
+}
+.progress-44 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(79.2deg);
+}
+.progress-44:before,
+.progress-44:after {
+  color: steelblue;
+}
+.progress-44:before {
+  content: "44%";
+  background: #fff content-box;
+  transform: rotate(-79.2deg);
+  text-transform: uppercase;
+}
+.progress-44:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-79.2deg);
+}
+.progress-44 > div {
+  color: green;
+  transform: scale(1.2) rotate(-79.2deg);
+  z-index: 5;
+}
+.progress-45 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(81deg);
+}
+.progress-45:before,
+.progress-45:after {
+  color: steelblue;
+}
+.progress-45:before {
+  content: "45%";
+  background: #fff content-box;
+  transform: rotate(-81deg);
+  text-transform: uppercase;
+}
+.progress-45:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-81deg);
+}
+.progress-45 > div {
+  color: green;
+  transform: scale(1.2) rotate(-81deg);
+  z-index: 5;
+}
+.progress-46 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(82.8deg);
+}
+.progress-46:before,
+.progress-46:after {
+  color: steelblue;
+}
+.progress-46:before {
+  content: "46%";
+  background: #fff content-box;
+  transform: rotate(-82.8deg);
+  text-transform: uppercase;
+}
+.progress-46:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-82.8deg);
+}
+.progress-46 > div {
+  color: green;
+  transform: scale(1.2) rotate(-82.8deg);
+  z-index: 5;
+}
+.progress-47 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(84.6deg);
+}
+.progress-47:before,
+.progress-47:after {
+  color: steelblue;
+}
+.progress-47:before {
+  content: "47%";
+  background: #fff content-box;
+  transform: rotate(-84.6deg);
+  text-transform: uppercase;
+}
+.progress-47:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-84.6deg);
+}
+.progress-47 > div {
+  color: green;
+  transform: scale(1.2) rotate(-84.6deg);
+  z-index: 5;
+}
+.progress-48 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(86.4deg);
+}
+.progress-48:before,
+.progress-48:after {
+  color: steelblue;
+}
+.progress-48:before {
+  content: "48%";
+  background: #fff content-box;
+  transform: rotate(-86.4deg);
+  text-transform: uppercase;
+}
+.progress-48:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-86.4deg);
+}
+.progress-48 > div {
+  color: green;
+  transform: scale(1.2) rotate(-86.4deg);
+  z-index: 5;
+}
+.progress-49 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(88.2deg);
+}
+.progress-49:before,
+.progress-49:after {
+  color: steelblue;
+}
+.progress-49:before {
+  content: "49%";
+  background: #fff content-box;
+  transform: rotate(-88.2deg);
+  text-transform: uppercase;
+}
+.progress-49:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-88.2deg);
+}
+.progress-49 > div {
+  color: green;
+  transform: scale(1.2) rotate(-88.2deg);
+  z-index: 5;
+}
+.progress-50 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(90deg);
+}
+.progress-50:before,
+.progress-50:after {
+  color: steelblue;
+}
+.progress-50:before {
+  content: "50%";
+  background: #fff content-box;
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+}
+.progress-50:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-90deg);
+}
+.progress-50 > div {
+  color: green;
+  transform: scale(1.2) rotate(-90deg);
+  z-index: 5;
+}
+.progress-51 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(91.8deg);
+}
+.progress-51:before,
+.progress-51:after {
+  color: steelblue;
+}
+.progress-51:before {
+  content: "51%";
+  background: #fff content-box;
+  transform: rotate(-91.8deg);
+  text-transform: uppercase;
+}
+.progress-51:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-91.8deg);
+}
+.progress-51 > div {
+  color: green;
+  transform: scale(1.2) rotate(-91.8deg);
+  z-index: 5;
+}
+.progress-52 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(93.6deg);
+}
+.progress-52:before,
+.progress-52:after {
+  color: steelblue;
+}
+.progress-52:before {
+  content: "52%";
+  background: #fff content-box;
+  transform: rotate(-93.6deg);
+  text-transform: uppercase;
+}
+.progress-52:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-93.6deg);
+}
+.progress-52 > div {
+  color: green;
+  transform: scale(1.2) rotate(-93.6deg);
+  z-index: 5;
+}
+.progress-53 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(95.4deg);
+}
+.progress-53:before,
+.progress-53:after {
+  color: steelblue;
+}
+.progress-53:before {
+  content: "53%";
+  background: #fff content-box;
+  transform: rotate(-95.4deg);
+  text-transform: uppercase;
+}
+.progress-53:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-95.4deg);
+}
+.progress-53 > div {
+  color: green;
+  transform: scale(1.2) rotate(-95.4deg);
+  z-index: 5;
+}
+.progress-54 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(97.2deg);
+}
+.progress-54:before,
+.progress-54:after {
+  color: steelblue;
+}
+.progress-54:before {
+  content: "54%";
+  background: #fff content-box;
+  transform: rotate(-97.2deg);
+  text-transform: uppercase;
+}
+.progress-54:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-97.2deg);
+}
+.progress-54 > div {
+  color: green;
+  transform: scale(1.2) rotate(-97.2deg);
+  z-index: 5;
+}
+.progress-55 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(99deg);
+}
+.progress-55:before,
+.progress-55:after {
+  color: steelblue;
+}
+.progress-55:before {
+  content: "55%";
+  background: #fff content-box;
+  transform: rotate(-99deg);
+  text-transform: uppercase;
+}
+.progress-55:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-99deg);
+}
+.progress-55 > div {
+  color: green;
+  transform: scale(1.2) rotate(-99deg);
+  z-index: 5;
+}
+.progress-56 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(100.8deg);
+}
+.progress-56:before,
+.progress-56:after {
+  color: steelblue;
+}
+.progress-56:before {
+  content: "56%";
+  background: #fff content-box;
+  transform: rotate(-100.8deg);
+  text-transform: uppercase;
+}
+.progress-56:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-100.8deg);
+}
+.progress-56 > div {
+  color: green;
+  transform: scale(1.2) rotate(-100.8deg);
+  z-index: 5;
+}
+.progress-57 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(102.6deg);
+}
+.progress-57:before,
+.progress-57:after {
+  color: steelblue;
+}
+.progress-57:before {
+  content: "57%";
+  background: #fff content-box;
+  transform: rotate(-102.6deg);
+  text-transform: uppercase;
+}
+.progress-57:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-102.6deg);
+}
+.progress-57 > div {
+  color: green;
+  transform: scale(1.2) rotate(-102.6deg);
+  z-index: 5;
+}
+.progress-58 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(104.4deg);
+}
+.progress-58:before,
+.progress-58:after {
+  color: steelblue;
+}
+.progress-58:before {
+  content: "58%";
+  background: #fff content-box;
+  transform: rotate(-104.4deg);
+  text-transform: uppercase;
+}
+.progress-58:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-104.4deg);
+}
+.progress-58 > div {
+  color: green;
+  transform: scale(1.2) rotate(-104.4deg);
+  z-index: 5;
+}
+.progress-59 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(106.2deg);
+}
+.progress-59:before,
+.progress-59:after {
+  color: steelblue;
+}
+.progress-59:before {
+  content: "59%";
+  background: #fff content-box;
+  transform: rotate(-106.2deg);
+  text-transform: uppercase;
+}
+.progress-59:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-106.2deg);
+}
+.progress-59 > div {
+  color: green;
+  transform: scale(1.2) rotate(-106.2deg);
+  z-index: 5;
+}
+.progress-60 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(108deg);
+}
+.progress-60:before,
+.progress-60:after {
+  color: steelblue;
+}
+.progress-60:before {
+  content: "60%";
+  background: #fff content-box;
+  transform: rotate(-108deg);
+  text-transform: uppercase;
+}
+.progress-60:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-108deg);
+}
+.progress-60 > div {
+  color: green;
+  transform: scale(1.2) rotate(-108deg);
+  z-index: 5;
+}
+.progress-61 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(109.8deg);
+}
+.progress-61:before,
+.progress-61:after {
+  color: steelblue;
+}
+.progress-61:before {
+  content: "61%";
+  background: #fff content-box;
+  transform: rotate(-109.8deg);
+  text-transform: uppercase;
+}
+.progress-61:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-109.8deg);
+}
+.progress-61 > div {
+  color: green;
+  transform: scale(1.2) rotate(-109.8deg);
+  z-index: 5;
+}
+.progress-62 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(111.6deg);
+}
+.progress-62:before,
+.progress-62:after {
+  color: steelblue;
+}
+.progress-62:before {
+  content: "62%";
+  background: #fff content-box;
+  transform: rotate(-111.6deg);
+  text-transform: uppercase;
+}
+.progress-62:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-111.6deg);
+}
+.progress-62 > div {
+  color: green;
+  transform: scale(1.2) rotate(-111.6deg);
+  z-index: 5;
+}
+.progress-63 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(113.4deg);
+}
+.progress-63:before,
+.progress-63:after {
+  color: steelblue;
+}
+.progress-63:before {
+  content: "63%";
+  background: #fff content-box;
+  transform: rotate(-113.4deg);
+  text-transform: uppercase;
+}
+.progress-63:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-113.4deg);
+}
+.progress-63 > div {
+  color: green;
+  transform: scale(1.2) rotate(-113.4deg);
+  z-index: 5;
+}
+.progress-64 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(115.2deg);
+}
+.progress-64:before,
+.progress-64:after {
+  color: steelblue;
+}
+.progress-64:before {
+  content: "64%";
+  background: #fff content-box;
+  transform: rotate(-115.2deg);
+  text-transform: uppercase;
+}
+.progress-64:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-115.2deg);
+}
+.progress-64 > div {
+  color: green;
+  transform: scale(1.2) rotate(-115.2deg);
+  z-index: 5;
+}
+.progress-65 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(117deg);
+}
+.progress-65:before,
+.progress-65:after {
+  color: steelblue;
+}
+.progress-65:before {
+  content: "65%";
+  background: #fff content-box;
+  transform: rotate(-117deg);
+  text-transform: uppercase;
+}
+.progress-65:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-117deg);
+}
+.progress-65 > div {
+  color: green;
+  transform: scale(1.2) rotate(-117deg);
+  z-index: 5;
+}
+.progress-66 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(118.8deg);
+}
+.progress-66:before,
+.progress-66:after {
+  color: steelblue;
+}
+.progress-66:before {
+  content: "66%";
+  background: #fff content-box;
+  transform: rotate(-118.8deg);
+  text-transform: uppercase;
+}
+.progress-66:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-118.8deg);
+}
+.progress-66 > div {
+  color: green;
+  transform: scale(1.2) rotate(-118.8deg);
+  z-index: 5;
+}
+.progress-67 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(120.6deg);
+}
+.progress-67:before,
+.progress-67:after {
+  color: steelblue;
+}
+.progress-67:before {
+  content: "67%";
+  background: #fff content-box;
+  transform: rotate(-120.6deg);
+  text-transform: uppercase;
+}
+.progress-67:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-120.6deg);
+}
+.progress-67 > div {
+  color: green;
+  transform: scale(1.2) rotate(-120.6deg);
+  z-index: 5;
+}
+.progress-68 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(122.4deg);
+}
+.progress-68:before,
+.progress-68:after {
+  color: steelblue;
+}
+.progress-68:before {
+  content: "68%";
+  background: #fff content-box;
+  transform: rotate(-122.4deg);
+  text-transform: uppercase;
+}
+.progress-68:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-122.4deg);
+}
+.progress-68 > div {
+  color: green;
+  transform: scale(1.2) rotate(-122.4deg);
+  z-index: 5;
+}
+.progress-69 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(124.2deg);
+}
+.progress-69:before,
+.progress-69:after {
+  color: steelblue;
+}
+.progress-69:before {
+  content: "69%";
+  background: #fff content-box;
+  transform: rotate(-124.2deg);
+  text-transform: uppercase;
+}
+.progress-69:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-124.2deg);
+}
+.progress-69 > div {
+  color: green;
+  transform: scale(1.2) rotate(-124.2deg);
+  z-index: 5;
+}
+.progress-70 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(126deg);
+}
+.progress-70:before,
+.progress-70:after {
+  color: steelblue;
+}
+.progress-70:before {
+  content: "70%";
+  background: #fff content-box;
+  transform: rotate(-126deg);
+  text-transform: uppercase;
+}
+.progress-70:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-126deg);
+}
+.progress-70 > div {
+  color: green;
+  transform: scale(1.2) rotate(-126deg);
+  z-index: 5;
+}
+.progress-71 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(127.8deg);
+}
+.progress-71:before,
+.progress-71:after {
+  color: steelblue;
+}
+.progress-71:before {
+  content: "71%";
+  background: #fff content-box;
+  transform: rotate(-127.8deg);
+  text-transform: uppercase;
+}
+.progress-71:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-127.8deg);
+}
+.progress-71 > div {
+  color: green;
+  transform: scale(1.2) rotate(-127.8deg);
+  z-index: 5;
+}
+.progress-72 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(129.6deg);
+}
+.progress-72:before,
+.progress-72:after {
+  color: steelblue;
+}
+.progress-72:before {
+  content: "72%";
+  background: #fff content-box;
+  transform: rotate(-129.6deg);
+  text-transform: uppercase;
+}
+.progress-72:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-129.6deg);
+}
+.progress-72 > div {
+  color: green;
+  transform: scale(1.2) rotate(-129.6deg);
+  z-index: 5;
+}
+.progress-73 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(131.4deg);
+}
+.progress-73:before,
+.progress-73:after {
+  color: steelblue;
+}
+.progress-73:before {
+  content: "73%";
+  background: #fff content-box;
+  transform: rotate(-131.4deg);
+  text-transform: uppercase;
+}
+.progress-73:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-131.4deg);
+}
+.progress-73 > div {
+  color: green;
+  transform: scale(1.2) rotate(-131.4deg);
+  z-index: 5;
+}
+.progress-74 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(133.2deg);
+}
+.progress-74:before,
+.progress-74:after {
+  color: steelblue;
+}
+.progress-74:before {
+  content: "74%";
+  background: #fff content-box;
+  transform: rotate(-133.2deg);
+  text-transform: uppercase;
+}
+.progress-74:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-133.2deg);
+}
+.progress-74 > div {
+  color: green;
+  transform: scale(1.2) rotate(-133.2deg);
+  z-index: 5;
+}
+.progress-75 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(135deg);
+}
+.progress-75:before,
+.progress-75:after {
+  color: steelblue;
+}
+.progress-75:before {
+  content: "75%";
+  background: #fff content-box;
+  transform: rotate(-135deg);
+  text-transform: uppercase;
+}
+.progress-75:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-135deg);
+}
+.progress-75 > div {
+  color: green;
+  transform: scale(1.2) rotate(-135deg);
+  z-index: 5;
+}
+.progress-76 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(136.8deg);
+}
+.progress-76:before,
+.progress-76:after {
+  color: steelblue;
+}
+.progress-76:before {
+  content: "76%";
+  background: #fff content-box;
+  transform: rotate(-136.8deg);
+  text-transform: uppercase;
+}
+.progress-76:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-136.8deg);
+}
+.progress-76 > div {
+  color: green;
+  transform: scale(1.2) rotate(-136.8deg);
+  z-index: 5;
+}
+.progress-77 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(138.6deg);
+}
+.progress-77:before,
+.progress-77:after {
+  color: steelblue;
+}
+.progress-77:before {
+  content: "77%";
+  background: #fff content-box;
+  transform: rotate(-138.6deg);
+  text-transform: uppercase;
+}
+.progress-77:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-138.6deg);
+}
+.progress-77 > div {
+  color: green;
+  transform: scale(1.2) rotate(-138.6deg);
+  z-index: 5;
+}
+.progress-78 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(140.4deg);
+}
+.progress-78:before,
+.progress-78:after {
+  color: steelblue;
+}
+.progress-78:before {
+  content: "78%";
+  background: #fff content-box;
+  transform: rotate(-140.4deg);
+  text-transform: uppercase;
+}
+.progress-78:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-140.4deg);
+}
+.progress-78 > div {
+  color: green;
+  transform: scale(1.2) rotate(-140.4deg);
+  z-index: 5;
+}
+.progress-79 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(142.2deg);
+}
+.progress-79:before,
+.progress-79:after {
+  color: steelblue;
+}
+.progress-79:before {
+  content: "79%";
+  background: #fff content-box;
+  transform: rotate(-142.2deg);
+  text-transform: uppercase;
+}
+.progress-79:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-142.2deg);
+}
+.progress-79 > div {
+  color: green;
+  transform: scale(1.2) rotate(-142.2deg);
+  z-index: 5;
+}
+.progress-80 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(144deg);
+}
+.progress-80:before,
+.progress-80:after {
+  color: steelblue;
+}
+.progress-80:before {
+  content: "80%";
+  background: #fff content-box;
+  transform: rotate(-144deg);
+  text-transform: uppercase;
+}
+.progress-80:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-144deg);
+}
+.progress-80 > div {
+  color: green;
+  transform: scale(1.2) rotate(-144deg);
+  z-index: 5;
+}
+.progress-81 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(145.8deg);
+}
+.progress-81:before,
+.progress-81:after {
+  color: steelblue;
+}
+.progress-81:before {
+  content: "81%";
+  background: #fff content-box;
+  transform: rotate(-145.8deg);
+  text-transform: uppercase;
+}
+.progress-81:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-145.8deg);
+}
+.progress-81 > div {
+  color: green;
+  transform: scale(1.2) rotate(-145.8deg);
+  z-index: 5;
+}
+.progress-82 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(147.6deg);
+}
+.progress-82:before,
+.progress-82:after {
+  color: steelblue;
+}
+.progress-82:before {
+  content: "82%";
+  background: #fff content-box;
+  transform: rotate(-147.6deg);
+  text-transform: uppercase;
+}
+.progress-82:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-147.6deg);
+}
+.progress-82 > div {
+  color: green;
+  transform: scale(1.2) rotate(-147.6deg);
+  z-index: 5;
+}
+.progress-83 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(149.4deg);
+}
+.progress-83:before,
+.progress-83:after {
+  color: steelblue;
+}
+.progress-83:before {
+  content: "83%";
+  background: #fff content-box;
+  transform: rotate(-149.4deg);
+  text-transform: uppercase;
+}
+.progress-83:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-149.4deg);
+}
+.progress-83 > div {
+  color: green;
+  transform: scale(1.2) rotate(-149.4deg);
+  z-index: 5;
+}
+.progress-84 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(151.2deg);
+}
+.progress-84:before,
+.progress-84:after {
+  color: steelblue;
+}
+.progress-84:before {
+  content: "84%";
+  background: #fff content-box;
+  transform: rotate(-151.2deg);
+  text-transform: uppercase;
+}
+.progress-84:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-151.2deg);
+}
+.progress-84 > div {
+  color: green;
+  transform: scale(1.2) rotate(-151.2deg);
+  z-index: 5;
+}
+.progress-85 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(153deg);
+}
+.progress-85:before,
+.progress-85:after {
+  color: steelblue;
+}
+.progress-85:before {
+  content: "85%";
+  background: #fff content-box;
+  transform: rotate(-153deg);
+  text-transform: uppercase;
+}
+.progress-85:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-153deg);
+}
+.progress-85 > div {
+  color: green;
+  transform: scale(1.2) rotate(-153deg);
+  z-index: 5;
+}
+.progress-86 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(154.8deg);
+}
+.progress-86:before,
+.progress-86:after {
+  color: steelblue;
+}
+.progress-86:before {
+  content: "86%";
+  background: #fff content-box;
+  transform: rotate(-154.8deg);
+  text-transform: uppercase;
+}
+.progress-86:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-154.8deg);
+}
+.progress-86 > div {
+  color: green;
+  transform: scale(1.2) rotate(-154.8deg);
+  z-index: 5;
+}
+.progress-87 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(156.6deg);
+}
+.progress-87:before,
+.progress-87:after {
+  color: steelblue;
+}
+.progress-87:before {
+  content: "87%";
+  background: #fff content-box;
+  transform: rotate(-156.6deg);
+  text-transform: uppercase;
+}
+.progress-87:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-156.6deg);
+}
+.progress-87 > div {
+  color: green;
+  transform: scale(1.2) rotate(-156.6deg);
+  z-index: 5;
+}
+.progress-88 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(158.4deg);
+}
+.progress-88:before,
+.progress-88:after {
+  color: steelblue;
+}
+.progress-88:before {
+  content: "88%";
+  background: #fff content-box;
+  transform: rotate(-158.4deg);
+  text-transform: uppercase;
+}
+.progress-88:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-158.4deg);
+}
+.progress-88 > div {
+  color: green;
+  transform: scale(1.2) rotate(-158.4deg);
+  z-index: 5;
+}
+.progress-89 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(160.2deg);
+}
+.progress-89:before,
+.progress-89:after {
+  color: steelblue;
+}
+.progress-89:before {
+  content: "89%";
+  background: #fff content-box;
+  transform: rotate(-160.2deg);
+  text-transform: uppercase;
+}
+.progress-89:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-160.2deg);
+}
+.progress-89 > div {
+  color: green;
+  transform: scale(1.2) rotate(-160.2deg);
+  z-index: 5;
+}
+.progress-90 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(162deg);
+}
+.progress-90:before,
+.progress-90:after {
+  color: steelblue;
+}
+.progress-90:before {
+  content: "90%";
+  background: #fff content-box;
+  transform: rotate(-162deg);
+  text-transform: uppercase;
+}
+.progress-90:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-162deg);
+}
+.progress-90 > div {
+  color: green;
+  transform: scale(1.2) rotate(-162deg);
+  z-index: 5;
+}
+.progress-91 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(163.8deg);
+}
+.progress-91:before,
+.progress-91:after {
+  color: steelblue;
+}
+.progress-91:before {
+  content: "91%";
+  background: #fff content-box;
+  transform: rotate(-163.8deg);
+  text-transform: uppercase;
+}
+.progress-91:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-163.8deg);
+}
+.progress-91 > div {
+  color: green;
+  transform: scale(1.2) rotate(-163.8deg);
+  z-index: 5;
+}
+.progress-92 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(165.6deg);
+}
+.progress-92:before,
+.progress-92:after {
+  color: steelblue;
+}
+.progress-92:before {
+  content: "92%";
+  background: #fff content-box;
+  transform: rotate(-165.6deg);
+  text-transform: uppercase;
+}
+.progress-92:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-165.6deg);
+}
+.progress-92 > div {
+  color: green;
+  transform: scale(1.2) rotate(-165.6deg);
+  z-index: 5;
+}
+.progress-93 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(167.4deg);
+}
+.progress-93:before,
+.progress-93:after {
+  color: steelblue;
+}
+.progress-93:before {
+  content: "93%";
+  background: #fff content-box;
+  transform: rotate(-167.4deg);
+  text-transform: uppercase;
+}
+.progress-93:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-167.4deg);
+}
+.progress-93 > div {
+  color: green;
+  transform: scale(1.2) rotate(-167.4deg);
+  z-index: 5;
+}
+.progress-94 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(169.2deg);
+}
+.progress-94:before,
+.progress-94:after {
+  color: steelblue;
+}
+.progress-94:before {
+  content: "94%";
+  background: #fff content-box;
+  transform: rotate(-169.2deg);
+  text-transform: uppercase;
+}
+.progress-94:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-169.2deg);
+}
+.progress-94 > div {
+  color: green;
+  transform: scale(1.2) rotate(-169.2deg);
+  z-index: 5;
+}
+.progress-95 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(171deg);
+}
+.progress-95:before,
+.progress-95:after {
+  color: steelblue;
+}
+.progress-95:before {
+  content: "95%";
+  background: #fff content-box;
+  transform: rotate(-171deg);
+  text-transform: uppercase;
+}
+.progress-95:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-171deg);
+}
+.progress-95 > div {
+  color: green;
+  transform: scale(1.2) rotate(-171deg);
+  z-index: 5;
+}
+.progress-96 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(172.8deg);
+}
+.progress-96:before,
+.progress-96:after {
+  color: steelblue;
+}
+.progress-96:before {
+  content: "96%";
+  background: #fff content-box;
+  transform: rotate(-172.8deg);
+  text-transform: uppercase;
+}
+.progress-96:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-172.8deg);
+}
+.progress-96 > div {
+  color: green;
+  transform: scale(1.2) rotate(-172.8deg);
+  z-index: 5;
+}
+.progress-97 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(174.6deg);
+}
+.progress-97:before,
+.progress-97:after {
+  color: steelblue;
+}
+.progress-97:before {
+  content: "97%";
+  background: #fff content-box;
+  transform: rotate(-174.6deg);
+  text-transform: uppercase;
+}
+.progress-97:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-174.6deg);
+}
+.progress-97 > div {
+  color: green;
+  transform: scale(1.2) rotate(-174.6deg);
+  z-index: 5;
+}
+.progress-98 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(176.4deg);
+}
+.progress-98:before,
+.progress-98:after {
+  color: steelblue;
+}
+.progress-98:before {
+  content: "98%";
+  background: #fff content-box;
+  transform: rotate(-176.4deg);
+  text-transform: uppercase;
+}
+.progress-98:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-176.4deg);
+}
+.progress-98 > div {
+  color: green;
+  transform: scale(1.2) rotate(-176.4deg);
+  z-index: 5;
+}
+.progress-99 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(178.2deg);
+}
+.progress-99:before,
+.progress-99:after {
+  color: steelblue;
+}
+.progress-99:before {
+  content: "99%";
+  background: #fff content-box;
+  transform: rotate(-178.2deg);
+  text-transform: uppercase;
+}
+.progress-99:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-178.2deg);
+}
+.progress-99 > div {
+  color: green;
+  transform: scale(1.2) rotate(-178.2deg);
+  z-index: 5;
+}
+.progress-100 {
+  background: linear-gradient(0deg, steelblue 50%, rgba(70, 130, 180, 0.2) 50%);
+  transform: rotate(180deg);
+}
+.progress-100:before,
+.progress-100:after {
+  color: steelblue;
+}
+.progress-100:before {
+  content: "100%";
+  background: #fff content-box;
+  transform: rotate(-180deg);
+  text-transform: uppercase;
+}
+.progress-100:after {
+  content: "";
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.2) rotate(-180deg);
+}
+.progress-100 > div {
+  color: green;
+  transform: scale(1.2) rotate(-180deg);
+  z-index: 5;
+}

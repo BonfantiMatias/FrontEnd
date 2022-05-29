@@ -1,9 +1,29 @@
-<header class="p-0 bg-dark text-white">
-  <div class="container">
-    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-end">
-      <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2 justify-content-lg-end">Login</button>
-       </div>
-    </div>
+<header>
+  <div class="profile-page sidebar-collapse">
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary">
+      <div class="container">
+        <div class="navbar-translate">
+          <a class="navbar-brand" href="/home" rel="tooltip">Home</a>
+
+          <button
+            *ngIf="!authService.isAuthenticated()"
+            class="btn btn-rouded btn-primary"
+            type="button"
+            [routerLink]="['/login/']"
+          >
+            Login
+          </button>
+
+          <button
+            (click)="logout()"
+            *ngIf="authService.isAuthenticated()"
+            class="btn btn-rouded btn-primary"
+            type="button"
+          >
+            Log Out: {{ authService.usuario.username }}
+          </button>
+        </div>
+      </div>
+    </nav>
   </div>
 </header>

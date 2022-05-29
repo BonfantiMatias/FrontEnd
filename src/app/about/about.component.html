@@ -1,51 +1,82 @@
 <div class="section" id="about">
-    <div class="container">
-        <div class="card" data-aos="fade-up" data-aos-offset="10">
-            <div class="row">
-                <div class="col-lg-6 col-md-12">
-                    <div class="card-body">
-                        <div class="h4 mt-0 title">Sobre mi</div>
-                            <p align="justify">Desde muy joven, siempre he tenido un sentido de motivación y pasión que me impulsaba hacia adelante. Ya sea explorando oportunidades únicas, aprendiendo habilidades adicionales o conociendo gente nueva, aporto estos valores a cada experiencia a lo largo de mi vida a nivel personal y profesional.</p>
-                            <p align="justify">Amante de la innovación y todo lo relacionado con la generacion de nuevos conocimientos. Enfrento los problemas con una sonrisa y los resuelvo lo antes posible. Me gusta optimizar el tiempo en los trabajos que realizo.</p>
-                            
-                    </div>
-                </div>    
-                <div class="col-lg-6 col-md-12">       
-                    <div class="card-body"  >
-                        <div class="h4 mt-0 title">Informacion Basica</div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <strong class="text-uppercase">Nombre:</strong>
-                            </div>
-                            <div class="col-sm-8" *ngFor="let basico of basico" > {{basico.nombre}} </div>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col-sm-4">
-                                <strong class="text-uppercase">Fecha de Nacimiento:</strong>
-                            </div>
-                            <div class="col-sm-8" *ngFor="let basico of basico" >{{basico.nacimiento}}</div>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col-sm-4">
-                                <strong class="text-uppercase">Email:</strong>
-                            </div>
-                            <div class="col-sm-8" *ngFor="let basico of basico" >{{basico.email}}</div>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col-sm-4">
-                                <strong class="text-uppercase">Ubicacion:</strong>
-                            </div>
-                            <div class="col-sm-8" *ngFor="let basico of basico" >{{basico.ubicacion}}</div>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col-sm-4">
-                                <strong class="text-uppercase">Idioma:</strong>
-                            </div>
-                            <div class="col-sm-8" *ngFor="let basico of basico" >{{basico.idioma}}</div>
-                        </div>
-                     </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="card" data-aos="fade-up" data-aos-offset="10">
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+          <div class="card-body">
+            <div class="h4 mt-0 title">Sobre mi</div>
+            <p align="justify">
+              Desde muy joven, siempre he tenido un sentido de motivación y
+              pasión que me impulsaba hacia adelante. Ya sea explorando
+              oportunidades únicas, aprendiendo habilidades adicionales o
+              conociendo gente nueva, aporto estos valores a cada experiencia a
+              lo largo de mi vida a nivel personal y profesional.
+            </p>
+            <p align="justify">
+              Amante de la innovación y todo lo relacionado con la generacion de
+              nuevos conocimientos. Enfrento los problemas con una sonrisa y los
+              resuelvo lo antes posible. Me gusta optimizar el tiempo en los
+              trabajos que realizo.
+            </p>
+          </div>
         </div>
+        <div class="col-lg-6 col-md-12">
+          <div class="card-body">
+            <div class="h4 mt-0 title">Informacion Basica</div>
+            <div class="row">
+              <div class="col-sm-4">
+                <strong class="text-uppercase">Nombre:</strong>
+              </div>
+              <div class="col-sm-8" *ngFor="let basico of basico">
+                {{ basico.nombre }}
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-sm-4">
+                <strong class="text-uppercase">Fecha de Nacimiento:</strong>
+              </div>
+              <div class="col-sm-8" *ngFor="let basico of basico">
+                {{ basico.nacimiento }}
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-sm-4">
+                <strong class="text-uppercase">Email:</strong>
+              </div>
+              <div class="col-sm-8" *ngFor="let basico of basico">
+                {{ basico.email }}
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-sm-4">
+                <strong class="text-uppercase">Ubicacion:</strong>
+              </div>
+              <div class="col-sm-8" *ngFor="let basico of basico">
+                {{ basico.ubicacion }}
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-sm-4">
+                <strong class="text-uppercase">Idioma:</strong>
+              </div>
+              <div class="col-sm-8" *ngFor="let basico of basico">
+                {{ basico.idioma }}
+              </div>
+            </div>
+          </div>
+          <div class="my-2">
+            <button
+              *ngIf="authservice.hasRole('ROLE_ADMIN')"
+              type="button"
+              name="editar"
+              [routerLink]="['/form', 1]"
+              class="btn btn-primary btn-sm"
+            >
+              editar
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../login/auth.service';
+import {  Habilidades } from './habilidad';
+import { SkillService } from './skill.service';
 
 @Component({
   selector: 'app-skill',
@@ -6,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skill.component.css']
 })
 export class SkillComponent implements OnInit {
+  
+  habilidades!: Habilidades[];
+  
+ 
+  
+  constructor(public SkillService: SkillService, public authservice:AuthService) { 
+    
+    
+  }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.SkillService.getSkills().subscribe(
+      habilidades => this.habilidades = habilidades
+    );
   }
 
 }

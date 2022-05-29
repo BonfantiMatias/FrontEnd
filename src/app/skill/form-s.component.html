@@ -1,0 +1,53 @@
+<div class="container my-5">
+  <div class="card my-5">
+    <div class="card-header">{{ titulo }}</div>
+    <div class="card-body">
+      <form>
+        <div class="form-group row">
+          <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
+          <div class="col-sm-6">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="habilidades.nombre"
+              name="nombre"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="nacimiento" class="col-form-label col-sm-2"
+            >Porcentaje</label
+          >
+          <div class="col-sm-6">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="habilidades.porcentaje"
+              name="nacimiento"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <button
+              class="btn btn-primary"
+              role="button"
+              (click)="create()"
+              *ngIf="!habilidades.id; else elseBlock"
+              [routerLink]="['/form2', habilidades.id]"
+            >
+              Crear
+            </button>
+            <ng-template #elseBlock>
+              <button class="btn btn-primary" role="button" (click)="update()">
+                Modificar
+              </button>
+            </ng-template>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
