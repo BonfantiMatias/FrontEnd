@@ -2,19 +2,18 @@
   <div class="container">
     <div class="h4 text-center mb-4 title">Proyectos</div>
     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <div class="row mt-3 ms-3">
+      <div *ngFor="let web to web " class="row mt-3 ms-3">
         <div class="col-sm-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
+              <h5 class="card-title">{{web.nombre}}</h5>
               <p class="card-text">
-                With supporting text below as a natural lead-in to additional
-                content.
+                {{web.descripcion}}
               </p>
               <div class="d-flex justify-content-evenly">
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-                <a href="http://www.google.com" class="btn btn-primary"
-                  >Go somewhere</a
+                <a href="{{web.url}}" class="btn btn-primary">Web</a>
+                <a href="{{web.git}}" class="btn btn-primary"
+                  >Codigo</a
                 >
               </div>
             </div>
