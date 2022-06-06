@@ -1,32 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 import { AuthService } from '../login/auth.service';
-import {  Habilidades } from './habilidad';
-import { SkillService } from './skill.service';
+import { Cursos } from './cursos';
+import { EducacionService } from './educacion.service';
 
 @Component({
-  selector: 'app-skill',
-  templateUrl: './skill.component.html',
-  styleUrls: ['./skill.component.css']
+  selector: 'app-educacion',
+  templateUrl: './educacion.component.html',
+  styleUrls: ['./educacion.component.css']
 })
-export class SkillComponent implements OnInit {
-  
-  habilidades!: Habilidades[];
-  
- 
-  
-  constructor(public SkillService: SkillService, public authservice:AuthService) { 
-    
-    
+export class EducacionComponent implements OnInit {
+
+  cursos!: Cursos[] ;
+
+  constructor(public educacionService: EducacionService, public authservice:AuthService) { }
+
+  ngOnInit(): void {
+    this.educacionService.getEdus().subscribe(
+    cursos => this.cursos = cursos);
   }
 
-  ngOnInit() {
-    this.SkillService.getSkills().subscribe(
-      habilidades => this.habilidades = habilidades
-    );
-  }
-
-  delete(habilidades: Habilidades  ): void{
+  delete(cursos: Cursos  ): void{
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
         confirmButton: 'btn btn-success',
@@ -37,7 +31,7 @@ export class SkillComponent implements OnInit {
     
     swalWithBootstrapButtons.fire({
       title: 'Estas Seguro?',
-      text: `Seguro quieres borrar la informacion de ${habilidades.nombre}`,
+      text: `Seguro quieres borrar la informacion de ${cursos.nombre}`,
       icon: 'warning',
       showCancelButton: true,
       confirmButtonText: 'Si, Eliminar!',
@@ -45,12 +39,12 @@ export class SkillComponent implements OnInit {
       reverseButtons: true
     }).then((result) => {
       if (result.isConfirmed) {
-        this.SkillService.delete(habilidades.id).subscribe(
+        this.educacionService.delete(cursos.id).subscribe(
           response => {
-            this.habilidades = this.habilidades.filter(bas => bas !== habilidades)
+            this.cursos = this.cursos.filter(bas => bas !== cursos)
             swalWithBootstrapButtons.fire(
               'Informacion Eliminada!',
-              `Informacion de ${habilidades.nombre} eliminada`,
+              `Informacion de ${cursos.nombre} eliminada`,
               'success'
             )
           }
@@ -59,6 +53,5 @@ export class SkillComponent implements OnInit {
       } 
     })
   }
-
 
 }

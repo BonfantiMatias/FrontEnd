@@ -9,6 +9,7 @@ import { P404Component } from './p404/p404.component';
 
 import { Detalle2Component } from './about/detalle2/detalle2.component';
 import { FormSComponent } from './skill/form-s.component';
+import { FormEComponent } from './educacion/form-e.component';
 
 const routes: Routes = [
   
@@ -17,8 +18,11 @@ const routes: Routes = [
   {path: 'home' , component: HomeComponent },
   {path: 'login' ,component: LoginComponent},
   {path: 'form' ,component: FormComponent},
+  {path: 'form2' ,component: FormSComponent},
+  {path: 'form3' ,component: FormEComponent},
   {path: 'form/:id' ,component: FormComponent},
   {path: 'form2/:id' ,component: FormSComponent},
+  {path: 'form3/:id' ,component: FormEComponent},
   {path: 'ver/:id' ,component: Detalle2Component},
   {path: '**' , component: P404Component },
   

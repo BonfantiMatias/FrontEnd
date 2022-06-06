@@ -9,60 +9,57 @@
             <input
               type="text"
               class="form-control"
-              [(ngModel)]="basico.nombre"
+              [(ngModel)]="cursos.nombre"
               name="nombre"
             />
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="nacimiento" class="col-form-label col-sm-2"
-            >Fecha de Nacimiento</label
+          <label for="fecha" class="col-form-label col-sm-2">Fecha</label>
+          <div class="col-sm-6">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="cursos.fecha"
+              name="fecha"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="plataforma" class="col-form-label col-sm-2"
+            >Plataforma</label
           >
           <div class="col-sm-6">
             <input
               type="text"
               class="form-control"
-              [(ngModel)]="basico.nacimiento"
-              name="nacimiento"
+              [(ngModel)]="cursos.plataforma"
+              name="plataforma"
             />
           </div>
         </div>
-
         <div class="form-group row">
-          <label for="email" class="col-form-label col-sm-2">Email</label>
+          <label for="docente" class="col-form-label col-sm-2">Docente </label>
           <div class="col-sm-6">
             <input
               type="text"
               class="form-control"
-              [(ngModel)]="basico.email"
-              name="email"
+              [(ngModel)]="cursos.docente"
+              name="docente"
             />
           </div>
         </div>
-
         <div class="form-group row">
-          <label for="ubicacion" class="col-form-label col-sm-2"
-            >Ubicacion</label
-          >
+          <label for="docente" class="col-form-label col-sm-2">
+            Descripcion
+          </label>
           <div class="col-sm-6">
             <input
               type="text"
               class="form-control"
-              [(ngModel)]="basico.ubicacion"
-              name="ubicacion"
-            />
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label for="idioma" class="col-form-label col-sm-2">Idioma</label>
-          <div class="col-sm-6">
-            <input
-              type="text"
-              class="form-control"
-              [(ngModel)]="basico.idioma"
-              name="idioma"
+              [(ngModel)]="cursos.descripcion"
+              name="descripcion"
             />
           </div>
         </div>
@@ -73,19 +70,14 @@
               class="btn btn-primary"
               role="button"
               (click)="create()"
-              *ngIf="!basico.id; else elseBlock"
-              [routerLink]="['/form', basico.id]"
+              *ngIf="!cursos.id; else elseBlock"
+              [routerLink]="['/form3', cursos.id]"
             >
               Crear
             </button>
             <ng-template #elseBlock>
-              <button
-                class="custom-btn btn-12"
-                role="button"
-                (click)="update()"
-              >
-                <span>{{ basico.nombre }}</span
-                ><span>Modificar</span>
+              <button class="btn btn-primary" role="button" (click)="update()">
+                Modificar
               </button>
             </ng-template>
           </div>

@@ -34,12 +34,15 @@ export class FormSComponent implements OnInit {
   }
 
   create(): void {
-    this.skillService.create(this.habilidades).subscribe(
-      response => {
-        this.router.navigate(['/form'])
-        Swal.fire('Se ha Modificado',`la informacion de ${this.habilidades.nombre} con exito`, 'success')
-      }
-    );
+    console.log(this.habilidades);
+    this.skillService.create(this.habilidades)
+      .subscribe(
+        habilidades => {
+          this.router.navigate(['form2']);
+          Swal.fire('Nueva Habilidad', `Has aprendido ${habilidades.nombre} con éxito`, 'success');
+        }
+        
+      );
   }
   
   update():void{

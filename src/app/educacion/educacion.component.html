@@ -1,0 +1,51 @@
+<div class="section" id="education">
+  <div class="container cc-education">
+    <div class="h4 text-center mb-4 title">Educacion</div>
+    <button
+      *ngIf="authservice.hasRole('ROLE_ADMIN')"
+      type="button"
+      name="Crear"
+      [routerLink]="['/form3']"
+      class="custom-btn btn-12"
+    >
+      <span>Nuevo Curso</span><span>Agregar</span>
+    </button>
+    <div *ngFor="let cursos of cursos" class="card">
+      <div>
+        <div class="row p-2">
+          <div class="col-md-3 bg-primary">
+            <div class="card-body cc-education-header">
+              <p class="h5">{{ cursos.fecha }}</p>
+              <div class="h4">{{ cursos.plataforma }}</div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="card-body">
+              <div class="h4">{{ cursos.nombre }}</div>
+              <h4 class="category">{{ cursos.docente }}</h4>
+              <p>{{ cursos.descripcion }}</p>
+              <button
+                *ngIf="authservice.hasRole('ROLE_ADMIN')"
+                type="button"
+                name="editar"
+                [routerLink]="['/form3', cursos.id]"
+                class="btn btn-primary btn-sm p-2"
+              >
+                Editar
+              </button>
+              <button
+                *ngIf="authservice.hasRole('ROLE_ADMIN')"
+                type="button"
+                name="eliminar"
+                (click)="delete(cursos)"
+                class="btn btn-danger btn-sm p-2"
+              >
+                Eliminar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

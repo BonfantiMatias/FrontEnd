@@ -8,7 +8,8 @@ import { BasicoService } from './basico.service';
 
 @Component({
   selector: 'app-form',
-  templateUrl: './form.component.html'
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.css']
   
 })
 export class FormComponent implements OnInit {
@@ -36,12 +37,15 @@ export class FormComponent implements OnInit {
   }
 
   create(): void {
-    this.BasicoService.create(this.basico).subscribe(
-      response => {
-        this.router.navigate(['/form'])
-        Swal.fire('Se ha Modificado',`la informacion de ${this.basico.nombre} con exito`, 'success')
-      }
-    );
+    console.log(this.basico);
+    this.BasicoService.create(this.basico)
+      .subscribe(
+        basico => {
+          this.router.navigate(['/clientes']);
+          Swal.fire('Nuevo cliente', `El cliente ${basico.nombre} ha sido creado con éxito`, 'success');
+        }
+        
+      );
   }
   
   update():void{

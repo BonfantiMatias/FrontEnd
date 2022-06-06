@@ -13,8 +13,8 @@ h1 {
 .circular-progress,
 .circular-progress:before,
 .circular-progress:after {
-  width: 20rem;
-  height: 20rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 50%;
 }
 .circular-progress:before,
@@ -25,10 +25,10 @@ h1 {
   text-align: center;
 }
 .circular-progress:before {
-  line-height: 10.25rem;
+  line-height: 4.25rem;
   padding: 0.75em;
   box-sizing: border-box;
-  font-size: 3.5rem;
+  font-size: 1.5rem;
 }
 .circular-progress.verde {
   background: linear-gradient(0deg, green 50%, rgba(0, 128, 0, 0.2) 50%);
