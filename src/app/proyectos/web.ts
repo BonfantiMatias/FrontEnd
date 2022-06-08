@@ -3,8 +3,5 @@ export class Web {
     nombre!: string;
     url!: string;
     git!: string;
-    descripcion!: string;
-    
-
-  
+    descripcion!: string; 
 }

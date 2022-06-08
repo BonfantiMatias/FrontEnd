@@ -13,14 +13,18 @@ export class ProyectosComponent implements OnInit {
   
   web!: Web[];
 
-  constructor(public proyectosService: ProyectosService, public authservice: AuthService) { }
-
-  ngOnInit(): void {
-    this.proyectosService.getWebs().subscribe(
-      web => this.web = web);
+  constructor(public ProyectosService: ProyectosService, public authservice:AuthService) { 
+    
+    
   }
 
-  delete(web:Web): void{
+  ngOnInit() {
+    this.ProyectosService.getWebs().subscribe(
+      web => this.web = web
+    );
+  }
+
+  delete(web: Web  ): void{
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
         confirmButton: 'btn btn-success',
@@ -39,7 +43,7 @@ export class ProyectosComponent implements OnInit {
       reverseButtons: true
     }).then((result) => {
       if (result.isConfirmed) {
-        this.proyectosService.delete(web.id).subscribe(
+        this.ProyectosService.delete(web.id).subscribe(
           response => {
             this.web = this.web.filter(bas => bas !== web)
             swalWithBootstrapButtons.fire(
@@ -53,6 +57,8 @@ export class ProyectosComponent implements OnInit {
       } 
     })
   }
+
+
 
 }
 
