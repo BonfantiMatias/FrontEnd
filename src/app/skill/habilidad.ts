@@ -1,6 +1,5 @@
 export class Habilidades {
-    id!: any;
-    nombre!: string;
-    porcentaje!: any;
-  static id: any;
+  id!: any;
+  nombre!: string;
+  porcentaje!: number;
 }

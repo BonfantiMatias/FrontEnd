@@ -1,6 +1,15 @@
 <div class="section" id="proyectos">
   <div class="container">
     <div class="h4 text-center mb-4 title">Proyectos</div>
+    <button
+      *ngIf="authservice.hasRole('ROLE_ADMIN')"
+      type="button"
+      name="Crear"
+      [routerLink]="['/form4']"
+      class="btn btn-primary btn-sm p-2"
+    >
+      Agregar Nuevo Proyecto
+    </button>
     <div class="card">
       <div class="row m-3">
         <div *ngFor="let web of web" class="col-sm-6">
@@ -13,6 +22,26 @@
               <div class="d-flex justify-content-evenly">
                 <a href="http://{{ web.url }}" class="btn btn-primary">Web</a>
                 <a href="{{ web.git }}" class="btn btn-primary">Codigo</a>
+              </div>
+              <div class="d-flex p-2">
+                <button
+                  *ngIf="authservice.hasRole('ROLE_ADMIN')"
+                  type="button"
+                  name="editar"
+                  [routerLink]="['/form4', web.id]"
+                  class="btn btn-primary btn-sm p-2"
+                >
+                  Editar
+                </button>
+                <button
+                  *ngIf="authservice.hasRole('ROLE_ADMIN')"
+                  type="button"
+                  name="eliminar"
+                  (click)="delete(web)"
+                  class="btn btn-danger btn-sm p-2"
+                >
+                  Eliminar
+                </button>
               </div>
             </div>
           </div>

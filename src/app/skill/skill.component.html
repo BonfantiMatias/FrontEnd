@@ -1,22 +1,29 @@
 <div class="section" id="skill">
   <div class="container">
     <div class="h4 text-center mb-4 title">Skills</div>
+    <button
+      *ngIf="authservice.hasRole('ROLE_ADMIN')"
+      type="button"
+      name="Crear"
+      [routerLink]="['/form2']"
+      class="btn btn-primary btn-sm p-2"
+    >
+      Agregar Nueva Skill
+    </button>
     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <button
-        *ngIf="authservice.hasRole('ROLE_ADMIN')"
-        type="button"
-        name="Crear"
-        [routerLink]="['/form2']"
-        class="btn btn-primary btn-sm p-2"
-      >
-        Crear
-      </button>
       <div
         class="skills d-flex flex-row justify-content-around bd-highlight mb-1 p-5"
       >
         <div *ngFor="let habilidades of habilidades">
           <div class="d-block m-2 p-5">
             <h3 class="mb-1">{{ habilidades.nombre }}</h3>
+            <img
+              class="rounded mx-auto d-block"
+              width="100"
+              src="../../assets/logos/{{ habilidades.nombre }}.svg"
+              alt="logo no disponible"
+            />
+            <progress value="{{ habilidades.porcentaje }}" max="100"></progress>
             <button
               *ngIf="authservice.hasRole('ROLE_ADMIN')"
               type="button"
@@ -36,9 +43,6 @@
               Eliminar
             </button>
           </div>
-          <div
-            class="circular-progress progress-{{ habilidades.porcentaje }} "
-          ></div>
         </div>
       </div>
     </div>

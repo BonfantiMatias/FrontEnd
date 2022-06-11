@@ -7,14 +7,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PortadaComponent } from './portada/portada.component';
 import { AboutComponent } from './about/about.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { SkillComponent } from './skill/skill.component';
 import { FormComponent } from './about/form.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { P404Component } from './p404/p404.component';
-
 import { DetalleComponent } from './portada/detalle/detalle.component';
 import { Detalle2Component } from './about/detalle2/detalle2.component';
 import { FormSComponent } from './skill/form-s.component';
@@ -23,9 +22,8 @@ import { EducacionComponent } from './educacion/educacion.component';
 import { FormEComponent } from './educacion/form-e.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { FormPComponent } from './proyectos/form-p.component';
-
-
-
+import { ExperienciaComponent } from './experiencia/experiencia.component';
+import { FormExComponent } from './experiencia/form-ex.component';
 
 @NgModule({
   declarations: [
@@ -45,16 +43,12 @@ import { FormPComponent } from './proyectos/form-p.component';
     EducacionComponent,
     FormEComponent,
     ProyectosComponent,
-    FormPComponent
+    FormPComponent,
+    ExperienciaComponent,
+    FormExComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-    
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [SkillService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
