@@ -1,77 +1,73 @@
 <div class="container my-5">
-    <div class="card my-5">
-      <div class="card-header">{{ titulo }}</div>
-      <div class="card-body">
-        <form>
-          <div class="form-group row">
-            <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
-            <div class="col-sm-6">
-              <input
-                type="text"
-                class="form-control"
-                [(ngModel)]="web.nombre"
-                name="nombre"
-              />
-            </div>
+  <div class="card my-5">
+    <div class="card-header">{{ titulo }}</div>
+    <div class="card-body">
+      <form>
+        <div class="form-group row">
+          <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
+          <div class="col-sm-6">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="web.nombre"
+              name="nombre"
+            />
           </div>
-  
-          <div class="form-group row">
-            <label for="fecha" class="col-form-label col-sm-2">Descripcion</label>
-            <div class="col-sm-6">
-              <input
-                type="text"
-                class="form-control"
-                [(ngModel)]="web.descripcion"
-                name="descripcion"
-              />
-            </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="fecha" class="col-form-label col-sm-2">Descripcion</label>
+          <div class="col-sm-6">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="web.descripcion"
+              name="descripcion"
+            />
           </div>
-          <div class="form-group row">
-            <label for="plataforma" class="col-form-label col-sm-2"
-              >URL</label
+        </div>
+        <div class="form-group row">
+          <label for="plataforma" class="col-form-label col-sm-2">URL</label>
+          <div class="col-sm-6">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="web.url"
+              name="url"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="docente" class="col-form-label col-sm-2">GIT </label>
+          <div class="col-sm-6">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="web.git"
+              name="docente"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <button
+              class="btn btn-primary"
+              role="button"
+              (click)="create()"
+              *ngIf="!web.id; else elseBlock"
+              [routerLink]="['/form4', web.id]"
             >
-            <div class="col-sm-6">
-              <input
-                type="text"
-                class="form-control"
-                [(ngModel)]="web.url"
-                name="url"
-              />
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="docente" class="col-form-label col-sm-2">GIT </label>
-            <div class="col-sm-6">
-              <input
-                type="text"
-                class="form-control"
-                [(ngModel)]="web.git"
-                name="docente"
-              />
-            </div>
-          </div>
-          
-  
-          <div class="form-group row">
-            <div class="col-sm-6">
-              <button
-                class="btn btn-primary"
-                role="button"
-                (click)="create()"
-                *ngIf="!web.id; else elseBlock"
-                [routerLink]="['/form3', web.id]"
-              >
-                Crear
+              Crear
+            </button>
+            <ng-template #elseBlock>
+              <button class="btn btn-primary" role="button" (click)="update()">
+                Modificar
               </button>
-              <ng-template #elseBlock>
-                <button class="btn btn-primary" role="button" (click)="update()">
-                  Modificar
-                </button>
-              </ng-template>
-            </div>
+            </ng-template>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
-  
+</div>

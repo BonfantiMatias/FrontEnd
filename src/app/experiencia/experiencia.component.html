@@ -1,1 +1,69 @@
-<p>experiencia works!</p>
+<div class="section" id="experience">
+  <div class="container py-2 cc-experience">
+    <div class="h4 text-center mb-4 title">Experiencia Laboral (Ficticia)</div>
+    <button
+      *ngIf="authservice.hasRole('ROLE_ADMIN')"
+      type="button"
+      name="Crear"
+      [routerLink]="['/form2']"
+      class="btn btn-primary btn-sm p-2"
+    >
+      Agregar Nueva Experiencia Laboral
+    </button>
+    <div class="row">
+      <ul class="timeline">
+        <li *ngFor="let trabajo of trabajo">
+          <div class="card">
+            <div class="row p-3">
+              <div class="col-lg-7">
+                <div class="h5 mt-0 title">
+                  {{ trabajo.empresa }}
+                </div>
+                <div class="h6 mt-0 title">
+                  {{ trabajo.puesto }} ({{ trabajo.fecha }})
+                </div>
+                <p align="justify">
+                  {{ trabajo.descripcion }}
+                </p>
+                <button
+                  *ngIf="authservice.hasRole('ROLE_ADMIN')"
+                  type="button"
+                  name="editar"
+                  [routerLink]="['/form5', trabajo.id]"
+                  class="btn btn-primary btn-sm p-2"
+                >
+                  Editar
+                </button>
+                <button
+                  *ngIf="authservice.hasRole('ROLE_ADMIN')"
+                  type="button"
+                  name="eliminar"
+                  (click)="delete(trabajo)"
+                  class="btn btn-danger btn-sm p-2"
+                >
+                  Eliminar
+                </button>
+              </div>
+              <div class="col-lg-5">
+                <ul>
+                  <li class="list">Funcion Principal</li>
+                  <ul>
+                    <li class="non_list">{{ trabajo.funcion }}</li>
+                  </ul>
+                  <li class="list">Tecnologias y Lenguajes</li>
+                  <ul>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <li class="non_list">{{ trabajo.skills }}</li>
+                      </div>
+                    </div>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

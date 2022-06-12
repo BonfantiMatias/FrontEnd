@@ -2,7 +2,7 @@
   <div class="card my-5">
     <div class="card-header">{{ titulo }}</div>
     <div class="card-body">
-      <form>
+      <form #Form2="ngForm">
         <div class="form-group row">
           <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
           <div class="col-sm-6">
@@ -10,8 +10,21 @@
               type="text"
               class="form-control"
               [(ngModel)]="habilidades.nombre"
+              (ngModelChange)="habilidades.nombre = $event.toUpperCase()"
               name="nombre"
+              required
+              minlength="3"
+              #nombre="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)"
+            >
+              <div *ngIf="nombre.errors?.['required']">Nombre es Requerido</div>
+              <div *ngIf="nombre.errors?.['minlength']">
+                Nombre debe tener al menos 3 caracteres
+              </div>
+            </div>
           </div>
         </div>
 
@@ -22,10 +35,28 @@
           <div class="col-sm-6">
             <input
               type="text"
+              oninput="numberOnly(this.id);"
+              maxlength="2"
               class="form-control"
               [(ngModel)]="habilidades.porcentaje"
-              name="nacimiento"
+              name="porcentaje"
+              required
+              #porcentaje="ngModel"
+              minlength="1"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="
+                porcentaje.invalid && (porcentaje.dirty || porcentaje.touched)
+              "
+            >
+              <div *ngIf="porcentaje.errors?.['required']">
+                Porcentaje es Requerido
+              </div>
+              <div *ngIf="porcentaje.errors?.['minlength']">
+                Porcentaje debe tener al menos 1 caracter
+              </div>
+            </div>
           </div>
         </div>
 
@@ -37,11 +68,17 @@
               (click)="create()"
               *ngIf="!habilidades.id; else elseBlock"
               [routerLink]="['/form2', habilidades.id]"
+              [disabled]="!Form2.form.valid"
             >
               Crear
             </button>
             <ng-template #elseBlock>
-              <button class="btn btn-primary" role="button" (click)="update()">
+              <button
+                class="btn btn-primary"
+                role="button"
+                (click)="update()"
+                [disabled]="!Form2.form.valid"
+              >
                 Modificar
               </button>
             </ng-template>

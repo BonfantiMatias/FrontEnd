@@ -4,4 +4,6 @@ export class Trabajos {
   fecha!: string;
   descripcion!: string;
   skills!: string;
+  puesto!: string;
+  funcion!: string;
 }

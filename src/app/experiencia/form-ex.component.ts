@@ -50,7 +50,7 @@ export class FormExComponent implements OnInit {
     this.experienciaService.update(this.trabajo).subscribe((trabajo) => {
       Swal.fire(
         'Informacion Actualizada',
-        `${trabajo.empresa} actualizada con exito!`,
+        `Experiencia en ${trabajo.empresa} actualizada con exito!`,
         'success'
       );
     });
