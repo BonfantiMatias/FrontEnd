@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { URL_BACKEND } from '../config/config';
 import { AuthService } from '../login/auth.service';
 import { Trabajos } from './trabajo';
 
@@ -9,7 +10,7 @@ import { Trabajos } from './trabajo';
   providedIn: 'root',
 })
 export class ExperienciaService {
-  public urlEndPoint: string = 'http://localhost:8080/api/experiencia';
+  public urlEndPoint: string = URL_BACKEND + '/api/experiencia';
 
   public httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
 

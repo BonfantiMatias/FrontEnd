@@ -1,22 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient,  HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Usuario } from './usuario';
+import { URL_BACKEND } from '../config/config';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-
   private _usuario: Usuario;
   private _token: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   public get usuario(): Usuario {
     if (this._usuario != null) {
       return this._usuario;
-    } else if (this._usuario == null && sessionStorage.getItem('usuario') != null) {
+    } else if (
+      this._usuario == null &&
+      sessionStorage.getItem('usuario') != null
+    ) {
       this._usuario = JSON.parse(sessionStorage.getItem('usuario')) as Usuario;
       return this._usuario;
     }
@@ -34,13 +37,13 @@ export class AuthService {
   }
 
   login(usuario: Usuario): Observable<any> {
-    const urlEndpoint = 'http://localhost:8080/oauth/token';
+    const urlEndpoint = URL_BACKEND + '/oauth/token';
 
     const credenciales = btoa('angularapp' + ':' + '12345');
 
     const httpHeaders = new HttpHeaders({
       'Content-Type': 'application/x-www-form-urlencoded',
-      'Authorization': 'Basic ' + credenciales
+      Authorization: 'Basic ' + credenciales,
     });
 
     let params = new URLSearchParams();
@@ -48,7 +51,9 @@ export class AuthService {
     params.set('username', usuario.username);
     params.set('password', usuario.password);
     console.log(params.toString());
-    return this.http.post<any>(urlEndpoint, params.toString(), { headers: httpHeaders });
+    return this.http.post<any>(urlEndpoint, params.toString(), {
+      headers: httpHeaders,
+    });
   }
 
   guardarUsuario(accessToken: string): void {
@@ -69,7 +74,7 @@ export class AuthService {
 
   obtenerDatosToken(accessToken: string): any {
     if (accessToken != null) {
-      return JSON.parse(atob(accessToken.split(".")[1]));
+      return JSON.parse(atob(accessToken.split('.')[1]));
     }
     return null;
   }

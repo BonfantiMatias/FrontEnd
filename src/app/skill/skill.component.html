@@ -10,12 +10,10 @@
     >
       Agregar Nueva Skill
     </button>
-    <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <div
-        class="skills d-flex flex-row justify-content-around bd-highlight mb-1 p-5"
-      >
+    <div class="card">
+      <div class="d-flex justify-content-around flex-wrap mb-1 p-5">
         <div *ngFor="let habilidades of habilidades">
-          <div class="d-block m-2 p-5">
+          <div class="m-2 p-5">
             <h3 class="mb-1">{{ habilidades.nombre }}</h3>
             <img
               class="rounded mx-auto d-block"
