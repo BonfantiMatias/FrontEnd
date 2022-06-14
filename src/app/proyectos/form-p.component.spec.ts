@@ -1,4 +1,7 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppComponent } from '../app.component';
 
 import { FormPComponent } from './form-p.component';
 
@@ -8,9 +11,9 @@ describe('FormPComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormPComponent ]
-    })
-    .compileComponents();
+      imports: [RouterTestingModule, HttpClientTestingModule],
+      declarations: [AppComponent, FormPComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

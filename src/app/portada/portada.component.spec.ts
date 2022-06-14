@@ -1,4 +1,7 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppComponent } from '../app.component';
 
 import { PortadaComponent } from './portada.component';
 
@@ -8,9 +11,9 @@ describe('PortadaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PortadaComponent ]
-    })
-    .compileComponents();
+      imports: [RouterTestingModule, HttpClientTestingModule],
+      declarations: [AppComponent, PortadaComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
