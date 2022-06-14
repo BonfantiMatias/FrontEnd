@@ -2,7 +2,7 @@
   <div class="card my-5">
     <div class="card-header">{{ titulo }}</div>
     <div class="card-body">
-      <form #Form2="ngForm">
+      <form #Formexp="ngForm">
         <div class="form-group row">
           <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
           <div class="col-sm-6">
@@ -68,7 +68,7 @@
               (click)="create()"
               *ngIf="!habilidades.id; else elseBlock"
               [routerLink]="['/form2', habilidades.id]"
-              [disabled]="!Form2.form.valid"
+              [disabled]="!Formexp.form.valid"
             >
               Crear
             </button>
