@@ -2,7 +2,7 @@
   <div class="card my-5">
     <div class="card-header">{{ titulo }}</div>
     <div class="card-body">
-      <form>
+      <form #Formskill="ngForm">
         <div class="form-group row">
           <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
           <div class="col-sm-6">
@@ -11,7 +11,19 @@
               class="form-control"
               [(ngModel)]="web.nombre"
               name="nombre"
+              required
+              minlength="4"
+              #nombre="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)"
+            >
+              <div *ngIf="nombre.errors?.['required']">Nombre es Requerido</div>
+              <div *ngIf="nombre.errors?.['minlength']">
+                Nombre debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
 
@@ -23,29 +35,70 @@
               class="form-control"
               [(ngModel)]="web.descripcion"
               name="descripcion"
+              required
+              minlength="4"
+              #descripcion="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="
+                descripcion.invalid &&
+                (descripcion.dirty || descripcion.touched)
+              "
+            >
+              <div *ngIf="descripcion.errors?.['required']">
+                Descripcion es Requerida
+              </div>
+              <div *ngIf="descripcion.errors?.['minlength']">
+                Descripcion debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
         <div class="form-group row">
           <label for="plataforma" class="col-form-label col-sm-2">URL</label>
           <div class="col-sm-6">
             <input
-              type="text"
+              type="url"
               class="form-control"
               [(ngModel)]="web.url"
               name="url"
+              required
+              #url="ngModel"
+              minlength="6"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="url.invalid && (url.dirty || url.touched)"
+            >
+              <div *ngIf="url.errors?.['required']">URL es Requerida</div>
+              <div *ngIf="url.errors?.['minlength']">
+                URL debe tener al menos 6 caracteres
+              </div>
+            </div>
           </div>
         </div>
         <div class="form-group row">
-          <label for="docente" class="col-form-label col-sm-2">GIT </label>
+          <label for="codigo" class="col-form-label col-sm-2">GIT </label>
           <div class="col-sm-6">
             <input
               type="text"
               class="form-control"
               [(ngModel)]="web.git"
-              name="docente"
+              name="codigo"
+              required
+              #codigo="ngModel"
+              minlength="6"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="codigo.invalid && (codigo.dirty || codigo.touched)"
+            >
+              <div *ngIf="codigo.errors?.['required']">Codigo es Requerido</div>
+              <div *ngIf="codigo.errors?.['minlength']">
+                Codigo debe tener al menos 6 caracteres
+              </div>
+            </div>
           </div>
         </div>
 
@@ -57,11 +110,17 @@
               (click)="create()"
               *ngIf="!web.id; else elseBlock"
               [routerLink]="['/form4', web.id]"
+              [disabled]="!Formskill.form.valid"
             >
               Crear
             </button>
             <ng-template #elseBlock>
-              <button class="btn btn-primary" role="button" (click)="update()">
+              <button
+                class="btn btn-primary"
+                role="button"
+                (click)="update()"
+                [disabled]="!Formskill.form.valid"
+              >
                 Modificar
               </button>
             </ng-template>

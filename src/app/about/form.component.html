@@ -2,7 +2,7 @@
   <div class="card my-5">
     <div class="card-header">{{ titulo }}</div>
     <div class="card-body">
-      <form>
+      <form #Formabout="ngForm">
         <div class="form-group row">
           <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
           <div class="col-sm-6">
@@ -11,7 +11,19 @@
               class="form-control"
               [(ngModel)]="basico.nombre"
               name="nombre"
+              required
+              minlength="4"
+              #Nombre="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="Nombre.invalid && (Nombre.dirty || Nombre.touched)"
+            >
+              <div *ngIf="Nombre.errors?.['required']">Nombre es Requerido</div>
+              <div *ngIf="Nombre.errors?.['minlength']">
+                Nombre debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
 
@@ -25,7 +37,19 @@
               class="form-control"
               [(ngModel)]="basico.nacimiento"
               name="nacimiento"
+              required
+              minlength="4"
+              #Fecha="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="Fecha.invalid && (Fecha.dirty || Fecha.touched)"
+            >
+              <div *ngIf="Fecha.errors?.['required']">Fecha es Requerida</div>
+              <div *ngIf="Fecha.errors?.['minlength']">
+                Fecha debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
 
@@ -37,7 +61,19 @@
               class="form-control"
               [(ngModel)]="basico.email"
               name="email"
+              required
+              minlength="4"
+              #Email="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="Email.invalid && (Email.dirty || Email.touched)"
+            >
+              <div *ngIf="Email.errors?.['required']">Email es Requerido</div>
+              <div *ngIf="Email.errors?.['minlength']">
+                Email debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
 
@@ -51,25 +87,58 @@
               class="form-control"
               [(ngModel)]="basico.ubicacion"
               name="ubicacion"
+              required
+              minlength="4"
+              #Ubicacion="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="
+                Ubicacion.invalid && (Ubicacion.dirty || Ubicacion.touched)
+              "
+            >
+              <div *ngIf="Ubicacion.errors?.['required']">
+                Ubicacion es Requerida
+              </div>
+              <div *ngIf="Ubicacion.errors?.['minlength']">
+                Ubicacion debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="idioma" class="col-form-label col-sm-2">Idioma1</label>
+          <label for="idioma" class="col-form-label col-sm-2">Idioma</label>
           <div class="col-sm-6">
             <input
               type="text"
               class="form-control"
               [(ngModel)]="basico.idioma"
               name="idioma"
+              required
+              minlength="4"
+              #Idioma="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="Idioma.invalid && (Idioma.dirty || Idioma.touched)"
+            >
+              <div *ngIf="Idioma.errors?.['required']">Idioma es Requerido</div>
+              <div *ngIf="Idioma.errors?.['minlength']">
+                Idioma debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="form-group row">
           <div class="col-sm-6">
-            <button class="custom-btn btn-12" role="button" (click)="update()">
+            <button
+              class="custom-btn btn-12"
+              role="button"
+              (click)="update()"
+              [disabled]="!Formabout.form.valid"
+            >
               <span>{{ basico.nombre }}</span
               ><span>Modificar</span>
             </button>

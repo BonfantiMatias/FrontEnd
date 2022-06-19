@@ -19,8 +19,22 @@
               {{ web.descripcion }}
             </p>
             <div class="d-flex justify-content-evenly">
-              <a href="http://{{ web.url }}" class="btn btn-primary">Web</a>
-              <a href="{{ web.git }}" class="btn btn-primary">Codigo</a>
+              <a
+                href="http://{{ web.url }}"
+                class="btn btn-primary"
+                target="_blank"
+                rel="tooltip"
+                title="Web"
+                >Web</a
+              >
+              <a
+                href="http://{{ web.git }}"
+                class="btn btn-primary"
+                target="_blank"
+                rel="tooltip"
+                title="Github"
+                >Codigo</a
+              >
             </div>
             <div class="d-flex p-1">
               <button

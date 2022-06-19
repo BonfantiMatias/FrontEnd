@@ -2,7 +2,7 @@
   <div class="card my-5">
     <div class="card-header">{{ titulo }}</div>
     <div class="card-body">
-      <form>
+      <form #Formedu="ngForm">
         <div class="form-group row">
           <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
           <div class="col-sm-6">
@@ -11,7 +11,19 @@
               class="form-control"
               [(ngModel)]="cursos.nombre"
               name="nombre"
+              required
+              minlength="4"
+              #Nombre="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="Nombre.invalid && (Nombre.dirty || Nombre.touched)"
+            >
+              <div *ngIf="Nombre.errors?.['required']">Nombre es Requerido</div>
+              <div *ngIf="Nombre.errors?.['minlength']">
+                Nombre debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
 
@@ -23,7 +35,19 @@
               class="form-control"
               [(ngModel)]="cursos.fecha"
               name="fecha"
+              required
+              minlength="4"
+              #Fecha="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="Fecha.invalid && (Fecha.dirty || Fecha.touched)"
+            >
+              <div *ngIf="Fecha.errors?.['required']">Fecha es Requerida</div>
+              <div *ngIf="Fecha.errors?.['minlength']">
+                Nombre debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
         <div class="form-group row">
@@ -36,7 +60,23 @@
               class="form-control"
               [(ngModel)]="cursos.plataforma"
               name="plataforma"
+              required
+              minlength="4"
+              #Plataforma="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="
+                Plataforma.invalid && (Plataforma.dirty || Plataforma.touched)
+              "
+            >
+              <div *ngIf="Plataforma.errors?.['required']">
+                Plataforma es Requerida
+              </div>
+              <div *ngIf="Plataforma.errors?.['minlength']">
+                Plataforma debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
         <div class="form-group row">
@@ -47,7 +87,21 @@
               class="form-control"
               [(ngModel)]="cursos.docente"
               name="docente"
+              required
+              minlength="4"
+              #Docente="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="Docente.invalid && (Docente.dirty || Docente.touched)"
+            >
+              <div *ngIf="Docente.errors?.['required']">
+                Docente es Requerido
+              </div>
+              <div *ngIf="Docente.errors?.['minlength']">
+                Docente debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
         <div class="form-group row">
@@ -60,7 +114,24 @@
               class="form-control"
               [(ngModel)]="cursos.descripcion"
               name="descripcion"
+              required
+              minlength="4"
+              #Descripcion="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="
+                Descripcion.invalid &&
+                (Descripcion.dirty || Descripcion.touched)
+              "
+            >
+              <div *ngIf="Descripcion.errors?.['required']">
+                Descripcion es Requerida
+              </div>
+              <div *ngIf="Descripcion.errors?.['minlength']">
+                Descripcion debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
 
@@ -72,11 +143,17 @@
               (click)="create()"
               *ngIf="!cursos.id; else elseBlock"
               [routerLink]="['/form3', cursos.id]"
+              [disabled]="!Formedu.form.valid"
             >
               Crear
             </button>
             <ng-template #elseBlock>
-              <button class="btn btn-primary" role="button" (click)="update()">
+              <button
+                class="btn btn-primary"
+                role="button"
+                (click)="update()"
+                [disabled]="!Formedu.form.valid"
+              >
                 Modificar
               </button>
             </ng-template>

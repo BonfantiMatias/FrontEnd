@@ -2,16 +2,32 @@
   <div class="card my-5">
     <div class="card-header">{{ titulo }}</div>
     <div class="card-body">
-      <form>
+      <form #Formskill="ngForm">
         <div class="form-group row">
-          <label for="nombre" class="col-form-label col-sm-2">Empresa</label>
+          <label for="plataforma" class="col-form-label col-sm-2"
+            >Empresa</label
+          >
           <div class="col-sm-6">
             <input
               type="text"
               class="form-control"
               [(ngModel)]="trabajo.empresa"
-              name="nombre"
+              name="empresa"
+              required
+              minlength="4"
+              #Empresa="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="Empresa.invalid && (Empresa.dirty || Empresa.touched)"
+            >
+              <div *ngIf="Empresa.errors?.['required']">
+                Empresa es Requerida
+              </div>
+              <div *ngIf="Empresa.errors?.['minlength']">
+                Empresa debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
         <div class="form-group row">
@@ -22,7 +38,19 @@
               class="form-control"
               [(ngModel)]="trabajo.puesto"
               name="puesto"
+              required
+              minlength="3"
+              #puesto="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="puesto.invalid && (puesto.dirty || puesto.touched)"
+            >
+              <div *ngIf="puesto.errors?.['required']">Puesto es Requerido</div>
+              <div *ngIf="puesto.errors?.['minlength']">
+                Puesto debe tener al menos 3 caracteres
+              </div>
+            </div>
           </div>
         </div>
         <div class="form-group row">
@@ -32,8 +60,20 @@
               type="text"
               class="form-control"
               [(ngModel)]="trabajo.fecha"
-              name="url"
+              name="fecha"
+              required
+              minlength="4"
+              #Fecha="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="Fecha.invalid && (Fecha.dirty || Fecha.touched)"
+            >
+              <div *ngIf="Fecha.errors?.['required']">Fecha es Requerida</div>
+              <div *ngIf="Fecha.errors?.['minlength']">
+                Fecha debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
         <div class="form-group row">
@@ -44,7 +84,24 @@
               class="form-control"
               [(ngModel)]="trabajo.descripcion"
               name="descripcion"
+              required
+              minlength="4"
+              #Descripcion="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="
+                Descripcion.invalid &&
+                (Descripcion.dirty || Descripcion.touched)
+              "
+            >
+              <div *ngIf="Descripcion.errors?.['required']">
+                Descripcion es Requerida
+              </div>
+              <div *ngIf="Descripcion.errors?.['minlength']">
+                Descripcion debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
         <div class="form-group row">
@@ -55,7 +112,21 @@
               class="form-control"
               [(ngModel)]="trabajo.funcion"
               name="funcion"
+              required
+              minlength="4"
+              #Funcion="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="Funcion.invalid && (Funcion.dirty || Funcion.touched)"
+            >
+              <div *ngIf="Funcion.errors?.['required']">
+                Funcion es Requerida
+              </div>
+              <div *ngIf="Funcion.errors?.['minlength']">
+                Funcion debe tener al menos 4 caracteres
+              </div>
+            </div>
           </div>
         </div>
 
@@ -66,8 +137,20 @@
               type="text"
               class="form-control"
               [(ngModel)]="trabajo.skills"
-              name="docente"
+              name="skill"
+              required
+              minlength="3"
+              #Skills="ngModel"
             />
+            <div
+              class="alert alert-danger"
+              *ngIf="Skills.invalid && (Skills.dirty || Skills.touched)"
+            >
+              <div *ngIf="Skills.errors?.['required']">Skills es Requerida</div>
+              <div *ngIf="Skills.errors?.['minlength']">
+                Skills debe tener al menos 3 caracteres
+              </div>
+            </div>
           </div>
         </div>
 
@@ -79,11 +162,17 @@
               (click)="create()"
               *ngIf="!trabajo.id; else elseBlock"
               [routerLink]="['/form5', trabajo.id]"
+              [disabled]="!Formskill.form.valid"
             >
               Crear
             </button>
             <ng-template #elseBlock>
-              <button class="btn btn-primary" role="button" (click)="update()">
+              <button
+                class="btn btn-primary"
+                role="button"
+                (click)="update()"
+                [disabled]="!Formskill.form.valid"
+              >
                 Modificar
               </button>
             </ng-template>
